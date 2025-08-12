@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -54,12 +55,13 @@ const HomeSlider = () => {
                   Yamboo, With 100% Natural, Organic & Plant Shop.
                 </p>
                 <div className="btn-wrap">
-                  <a
-                    className="btn btn-custom-size xl-size btn-Yamboo-primary"
-                    href="/shop"
-                  >
-                    Discover Now
-                  </a>
+
+                <Link
+                  className="btn btn-custom-size xl-size btn-Yamboo-primary"
+                  to="/shop"
+                >
+                  Discover Now
+                </Link>
                 </div>
               </div>
               <div className="slide-img">

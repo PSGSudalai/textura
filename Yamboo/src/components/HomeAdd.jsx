@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HomeAdd = () => {
   // Banner data
@@ -9,7 +10,7 @@ const HomeAdd = () => {
     discountText: "Up To",
     discountValue: "-50%",
     discountSuffix: "Off",
-    link: "shop-grid-fullwidth.html",
+    link: "/shop",
     btnClass: "btn btn-custom-size btn-Yamboo-primary",
     btnText: "Shop Now",
   };
@@ -45,12 +46,13 @@ const HomeAdd = () => {
                     {bannerData.discountSuffix}
                   </h3>
                   <div className="button-wrap">
-                    <a
-                      className={bannerData.btnClass}
-                      href={bannerData.link}
-                    >
-                      {bannerData.btnText}
-                    </a>
+
+                  <Link
+                    className={bannerData.btnClass}
+                    to={bannerData.link}
+                  >
+                    {bannerData.btnText}
+                  </Link>
                   </div>
                 </div>
               </div>

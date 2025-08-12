@@ -1,5 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
+<Link
+  className="btn btn-custom-size xl-size btn-Yamboo-primary"
+  to="/shop"
+>
+  Discover Now
+</Link>
 const Banners = () => {
   const banners = [
     {
@@ -7,7 +14,7 @@ const Banners = () => {
       img: "/assets/images/banner/2-1-570x500.jpg",
       collection: "New Collection",
       title: "Indoore Plant",
-      link: "shop-grid-fullwidth.html",
+      link: "/shop",
       btnClass: "btn btn-custom-size btn-Yamboo-primary",
       position: "text-position-center",
     },
@@ -16,7 +23,7 @@ const Banners = () => {
       img: "/assets/images/banner/2-2-570x235.jpg",
       collection: "Collection Of Cactus",
       title: "Plant Port",
-      link: "shop-grid-fullwidth.html",
+      link: "/shop",
       btnClass: "btn btn-custom-size sm-size btn-Yamboo-primary",
       position: "text-position-left",
     },
@@ -25,7 +32,7 @@ const Banners = () => {
       img: "/assets/images/banner/2-3-570x235.jpg",
       collection: "Collection Of Cactus",
       title: "Hanging Pots",
-      link: "shop-grid-fullwidth.html",
+      link: "/shop",
       btnClass: "btn btn-custom-size sm-size btn-Yamboo-primary",
       position: "text-position-left",
     },
@@ -48,9 +55,9 @@ const Banners = () => {
                     <span className="collection">{banner.collection}</span>
                     <h3 className="title">{banner.title}</h3>
                     <div className="button-wrap">
-                      <a className={banner.btnClass} href={banner.link}>
-                        Shop Now
-                      </a>
+                      <Link className={banner.btnClass} to={banner.link}>
+  Shop Now
+</Link>
                     </div>
                   </div>
                 </div>
