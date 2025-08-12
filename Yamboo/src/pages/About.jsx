@@ -141,7 +141,7 @@ const About = () => {
                   <form
                     id="contact-form"
                     className="contact-form"
-                    action="https://whizthemes.com/mail-php/mamunur/Yamboo/Yamboo.php"
+                    action=""
                   >
                     <div className="group-input">
                       <div className="form-field me-lg-30 mb-35 mb-lg-0">
@@ -191,7 +191,7 @@ const About = () => {
                         type="submit"
                         className="btn btn-custom-size xl-size btn-Yamboo-primary"
                       >
-                        Post Comment
+                        Submit
                       </button>
                     </div>
                     <p className="form-message mt-3 mb-0"></p>
