@@ -7,7 +7,7 @@ const Shop = () => {
     <div>
       <main className="main-content">
         <Breadcrumb
-          title="Contact"
+          title="Shop"
           links={[
             { to: "/", label: "Home" },
             { label: "Shop" }
