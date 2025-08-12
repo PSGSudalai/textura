@@ -6,7 +6,7 @@ const Footer = () => {
         
       <div
         class="footer-area"
-        data-bg-image="assets/images/footer/bg/1-1920x465.jpg"
+        data-bg-image="/assets/images/footer/bg/1-1920x465.jpg"
       >
         <div class="footer-top section-space-top-100 pb-60">
           <div class="container">
@@ -15,7 +15,7 @@ const Footer = () => {
                 <div class="footer-widget-item">
                   <div class="footer-widget-logo">
                     <a href="index.html">
-                      <img src="assets/images/logo/dark.png" alt="Logo" />
+                      <img src="/assets/images/logo/dark.png" alt="Logo" />
                     </a>
                   </div>
                   <p class="footer-widget-desc">

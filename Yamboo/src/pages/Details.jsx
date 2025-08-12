@@ -6,6 +6,7 @@ import NewProducts from "../components/NewProducts";
 const Details = () => {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
+  console.log(product)
 
   if (!product) {
     return <h2>Product Not Found</h2>;

@@ -4,7 +4,7 @@ const Banners = () => {
   const banners = [
     {
       type: "large", // large left-side banner
-      img: "assets/images/banner/2-1-570x500.jpg",
+      img: "/assets/images/banner/2-1-570x500.jpg",
       collection: "New Collection",
       title: "Indoore Plant",
       link: "shop-grid-fullwidth.html",
@@ -13,7 +13,7 @@ const Banners = () => {
     },
     {
       type: "small", // top-right banner
-      img: "assets/images/banner/2-2-570x235.jpg",
+      img: "/assets/images/banner/2-2-570x235.jpg",
       collection: "Collection Of Cactus",
       title: "Plant Port",
       link: "shop-grid-fullwidth.html",
@@ -22,7 +22,7 @@ const Banners = () => {
     },
     {
       type: "small", // bottom-right banner
-      img: "assets/images/banner/2-3-570x235.jpg",
+      img: "/assets/images/banner/2-3-570x235.jpg",
       collection: "Collection Of Cactus",
       title: "Hanging Pots",
       link: "shop-grid-fullwidth.html",

@@ -46,7 +46,7 @@ const Header = () => {
                     className="header-logo"
                     style={{ maxWidth: "100px" }}
                   >
-                    <img src="assets/images/logo/dark.png" alt="Header Logo" />
+                    <img src="/assets/images/logo/dark.png" alt="Header Logo" />
                   </a>
 
                   <div className="d-none d-lg-block">

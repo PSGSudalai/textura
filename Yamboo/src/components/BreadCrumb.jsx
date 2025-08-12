@@ -7,7 +7,7 @@ const Breadcrumb = ({ title, links }) => {
       className="breadcrumb-area breadcrumb-height"
       style={{
         backgroundImage:
-          "url(assets/images/breadcrumb/bg/1-1-1919x388.jpg)",
+          "url(/assets/images/breadcrumb/bg/1-1-1919x388.jpg)",
       }}
     >
       <div className="container h-100">

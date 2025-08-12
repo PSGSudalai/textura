@@ -3,7 +3,7 @@ import React from "react";
 const HomeAdd = () => {
   // Banner data
   const bannerData = {
-    bgImage: "assets/images/banner/4-1-1170x400.jpg",
+    bgImage: "/assets/images/banner/4-1-1170x400.jpg",
     offer: "Only Today",
     title: "Indoore Plants & Poot",
     discountText: "Up To",

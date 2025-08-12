@@ -8,18 +8,18 @@ import "swiper/css/navigation";
 const HomeSlider = () => {
   const slides = [
     {
-      bg: "assets/images/slider/bg/2-1.jpg",
-      img: "assets/images/slider/slide-img/2-1-960x741.jpg",
+      bg: "/assets/images/slider/bg/2-1.jpg",
+      img: "/assets/images/slider/slide-img/2-1-960x741.jpg",
       count: "01",
     },
     {
-      bg: "assets/images/slider/bg/2-1.jpg",
-      img: "assets/images/slider/slide-img/2-2-960x741.jpg",
+      bg: "/assets/images/slider/bg/2-1.jpg",
+      img: "/assets/images/slider/slide-img/2-2-960x741.jpg",
       count: "02",
     },
     {
-      bg: "assets/images/slider/bg/2-1.jpg",
-      img: "assets/images/slider/slide-img/2-3-960x741.jpg",
+      bg: "/assets/images/slider/bg/2-1.jpg",
+      img: "/assets/images/slider/slide-img/2-3-960x741.jpg",
       count: "03",
     },
   ];

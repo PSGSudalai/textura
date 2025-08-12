@@ -5,7 +5,7 @@ export const products = [
     name: "Bamboo Bath Towel",
     brand: "Yamboo",
     price: 29.99,
-    image: "assets/images/product/medium-size/1-1-270x300.jpg",
+    image: "/assets/images/product/medium-size/1-1-270x300.jpg",
     description:
       "Crafted from premium bamboo fiber, these bath towels offer an ultra-soft, luxurious feel with superior absorbency. Naturally hypoallergenic and antimicrobial, ideal for sensitive skin.",
     attributes: {
@@ -30,7 +30,7 @@ export const products = [
     name: "Bamboo Face Towel",
     brand: "Yamboo",
     price: 12.99,
-    image: "assets/images/product/medium-size/1-1-270x300.jpg",
+    image: "/assets/images/product/medium-size/1-1-270x300.jpg",
     description:
       "Soft on the skin and gentle enough for daily use, these bamboo face towels are highly absorbent and naturally antibacterial, making them perfect for skincare routines.",
     attributes: {
@@ -54,7 +54,7 @@ export const products = [
     name: "Bamboo Baby Towel",
     brand: "Yamboo",
     price: 19.99,
-    image: "assets/images/product/medium-size/1-1-270x300.jpg",
+    image: "/assets/images/product/medium-size/1-1-270x300.jpg",
     description:
       "Wrap your baby in the ultimate comfort with these super-soft bamboo baby towels. Naturally antibacterial and ultra-gentle, perfect for delicate newborn skin.",
     attributes: {
@@ -79,7 +79,7 @@ export const products = [
     name: "Bamboo Pillow Cover",
     brand: "Yamboo",
     price: 15.99,
-    image: "assets/images/product/medium-size/1-1-270x300.jpg",
+    image: "/assets/images/product/medium-size/1-1-270x300.jpg",
     description:
       "Bamboo pillow covers offer a silky-smooth feel while enhancing sleep quality with temperature regulation and hypoallergenic properties.",
     attributes: {
@@ -104,7 +104,7 @@ export const products = [
     name: "Bamboo Tissue Paper (Reusable)",
     brand: "Yamboo",
     price: 9.99,
-    image: "assets/images/product/medium-size/1-1-270x300.jpg",
+    image: "/assets/images/product/medium-size/1-1-270x300.jpg",
     description:
       "Eco-friendly and reusable bamboo tissue papers are a sustainable alternative to traditional tissues. Soft, absorbent, and washable.",
     attributes: {

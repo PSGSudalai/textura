@@ -20,29 +20,29 @@ const aboutData = {
     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
     occaecat cupidatat non proident, sunt in culpa qui officia
     deserunt mollit anim id est laborum. Sed ut perspiciatis`,
-  signatureImg: "assets/images/about/icon/2.png"
+  signatureImg: "/assets/images/about/icon/2.png"
 };
 
 const shippingData = [
   {
-    icon: "assets/images/shipping/icon/car.png",
+    icon: "/assets/images/shipping/icon/car.png",
     title: "Free Shipping",
     desc: "Capped at $319 per order"
   },
   {
-    icon: "assets/images/shipping/icon/card.png",
+    icon: "/assets/images/shipping/icon/card.png",
     title: "Safe Payment",
     desc: "With our payment gateway"
   },
   {
-    icon: "assets/images/shipping/icon/service.png",
+    icon: "/assets/images/shipping/icon/service.png",
     title: "Best Services",
     desc: "Friendly & Supper Services"
   }
 ];
 
 const contactInfoData = {
-  backgroundImg: "url(assets/images/contact/1-1-370x500.jpg)",
+  backgroundImg: "url(/assets/images/contact/1-1-370x500.jpg)",
   title: "Contact Info:",
   desc: "Fill the form and our team will get back to you within 24 hours.",
   contacts: [
