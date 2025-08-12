@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { products } from "../data/productsData";
-
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -54,9 +54,9 @@ const NewProducts = () => {
                     </a>
                   </div>
                   <div className="product-content">
-                    <a className="product-name" href={`/product/${product.id}`}>
+                    <Link className="product-name" to={`/product/${product.id}`}>
                       {product.name}
-                    </a>
+                    </Link>
                     <div className="price-box pb-1">
                       <span className="new-price">
                         ${product.price.toFixed(2)}

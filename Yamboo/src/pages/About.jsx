@@ -112,7 +112,7 @@ const About = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="contact-form-area section-space-y-axis-100">
+        <div id="contact-form-section" className="contact-form-area section-space-y-axis-100">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
