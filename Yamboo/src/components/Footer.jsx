@@ -10,7 +10,7 @@ const Footer = () => {
       >
         <div class="footer-top section-space-top-100 pb-60">
           <div class="container">
-            <div class="row">
+            <div class="row" style={{justifyContent:"space-between"}}>
               <div class="col-lg-3">
                 <div class="footer-widget-item">
                   <div class="footer-widget-logo">
