@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,46 +11,49 @@ const Header = () => {
             <div className="container-fluid">
               <div className="header-inner-box">
                 <div className="logo" style={{ maxWidth: 90 }}>
-                  <a className="navbar-brand" href="index.html">
-                    <img src="assets/img/logo-white.png" alt="" />
-                  </a>
+                  <Link className="navbar-brand" to="/">
+                    <img src="assets/img/logo-white.png" alt="Logo" />
+                  </Link>
                 </div>
+
                 {/* Main Menu  */}
                 <div className="main-menu d-none d-lg-block">
                   <ul>
                     <li className="active">
-                      <a className="navlink" href="index.html">
+                      <Link className="navlink" to="/">
                         Home
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="has-arrow" href="#">
+                      <Link className="has-arrow" to="/services">
                         Services
-                      </a>
+                      </Link>
                       <ul className="sub-menu">
                         <li>
-                          <a href="#">Yamboo</a>
+                          <Link to="/services/yamboo">Yamboo</Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <a className="has-arrow" href="about.html">
-                        about us
-                      </a>
+                      <Link className="has-arrow" to="/about">
+                        About Us
+                      </Link>
                     </li>
                     <li>
-                      <a className="navlink" href="contact.html">
+                      <Link className="navlink" to="/contact">
                         Contact
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
+
                 {/* Mobile Menu */}
                 <div className="mobile-nav-bar d-block col-sm-1 col-6 d-lg-none">
                   <div className="mobile-nav-wrap">
                     <div id="hamburger">
                       <i className="las la-bars" />
                     </div>
+
                     {/* mobile menu - responsive menu  */}
                     <div className="mobile-nav">
                       <button type="button" className="close-nav">
@@ -58,30 +62,31 @@ const Header = () => {
                       <nav className="sidebar-nav">
                         <ul className="metismenu" id="mobile-menu">
                           <li>
-                            <a className="has-arrow" href="index.html">
+                            <Link className="has-arrow" to="/">
                               Homes
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a className="has-arrow" href="#">
+                            <Link className="has-arrow" to="/services">
                               Services
-                            </a>
+                            </Link>
                             <ul className="sub-menu">
                               <li>
-                                <a href="#">Services</a>
+                                <Link to="/services">Services</Link>
                               </li>
                             </ul>
                           </li>
                           <li>
-                            <a className="has-arrow" href="about.html">
-                              about us
-                            </a>
+                            <Link className="has-arrow" to="/about">
+                              About Us
+                            </Link>
                           </li>
                           <li>
-                            <a href="contact.html">Contact</a>
+                            <Link to="/contact">Contact</Link>
                           </li>
                         </ul>
                       </nav>
+
                       <div className="action-bar">
                         <a href="mailto:info@roofix.com">
                           <i className="las la-envelope" />
@@ -91,9 +96,9 @@ const Header = () => {
                           <i className="fal fa-phone" />
                           123-456-7890
                         </a>
-                        <a href="contact.html" className="theme-btn">
+                        <Link to="/contact" className="theme-btn">
                           Contact Us
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
