@@ -26,7 +26,7 @@ const Testimonial = () => {
   return (
     <div className="testimonial-section section-padding">
       <div className="container">
-        {/* Section Heading */}
+        
         <div className="row">
           <div className="col-xl-5 col-lg-6 col-md-7">
             <div className="section-title">

@@ -1,30 +1,47 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const aboutData = {
-    sectionTitle: "10 Decades of Expertise in Quality Flooring",
+    sectionTitle: "Redefining Exports with Innovation",
     sectionDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+      "At Textura, we blend India’s rich textile heritage with modern, eco-conscious innovation. With over a decade of expertise, we continue to set benchmarks in quality and sustainability for households and businesses worldwide.",
     buttonText: "About Us",
-    buttonLink: "/about", // instead of "about.html"
-    image: "/assets/img/img1.jpg", // ✅ works if inside public/assets/img/
+    buttonLink: "/about",
+    image: "/assets/img/img1.jpg",
     accordion: [
       {
         id: "aboutOne",
-        title: "History",
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+        title: "Core Values",
+        text: [
+          {
+            title: "Trust & Transparency",
+            description:
+              "Building long-term partnerships based on honesty and reliability.",
+          },
+          {
+            title: "Craftsmanship & Quality",
+            description:
+              "Combining India’s textile heritage with modern, eco-friendly technology.",
+          },
+          {
+            title: "Global Perspective",
+            description:
+              "Serving diverse international markets with culturally adaptable textile solutions.",
+          },
+        ],
         show: true,
       },
       {
         id: "aboutTwo",
         title: "Mission",
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting...",
+        text: "To deliver premium-quality bamboo textiles that redefine comfort, encourage sustainability, and bring eco-conscious living into every household and business across the globe.",
         show: false,
       },
       {
         id: "aboutThree",
         title: "Vision",
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets...",
+        text: "To be the preferred global supplier of eco-friendly textiles, setting new standards in quality, sustainability, and innovation—while proudly showcasing India’s role in the future of green textiles.",
         show: false,
       },
     ],
@@ -38,18 +55,15 @@ const About = () => {
           <div className="col-xl-5 col-lg-6 col-md-7">
             <div className="section-title">
               <h2 className="visible-slowly-right">{aboutData.sectionTitle}</h2>
-              <p
-                className="pt-20 wow fadeInUp animated"
-                data-wow-delay=".4s"
-              >
+              <p className="pt-20 wow fadeInUp animated" data-wow-delay=".4s">
                 {aboutData.sectionDescription}
               </p>
             </div>
           </div>
           <div className="col-xl-7 col-lg-6 col-md-5 text-md-end">
-            <a href={aboutData.buttonLink} className="bordered-btn">
+            <Link to={aboutData.buttonLink} className="bordered-btn">
               {aboutData.buttonText} <i className="fa-light fa-arrow-right" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -90,7 +104,20 @@ const About = () => {
                       aria-labelledby={item.id}
                       data-bs-parent="#accordionAbout"
                     >
-                      <div className="accordion-body">{item.text}</div>
+                      <div className="accordion-body">
+                        {Array.isArray(item.text) ? (
+                          <ul>
+                            {item.text.map((value, idx) => (
+                              <li key={idx}>
+                                <strong>{value.title}:</strong>{" "}
+                                {value.description}
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          item.text
+                        )}
+                      </div>
                     </div>
                   </div>
                 ))}

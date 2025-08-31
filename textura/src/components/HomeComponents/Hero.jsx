@@ -4,7 +4,7 @@ const Hero = () => {
   const heroData = [
     {
       id: 1,
-      bg: "/assets/img/home1.jpg",
+      bg: "assets/img/home1.jpg",
       overlay: "overlay-4",
       subtitle: "Premium Export",
       title: (
@@ -19,7 +19,7 @@ const Hero = () => {
     },
     {
       id: 2,
-      bg: "/assets/img/home1.jpg",
+      bg: "assets/img/home2.jpg",
       overlay: "overlay-5",
       subtitle: "Durable Design",
       title: (
@@ -34,7 +34,7 @@ const Hero = () => {
     },
     {
       id: 3,
-      bg: "/assets/img/home2.jpg",
+      bg: "assets/img/home3.jpg",
       overlay: "overlay-4",
       subtitle: "Durable Design",
       title: (

@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// Footer content as JSON
 const footerData = {
   section: {
     title: "Transform Your Space",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "At Textura, we blend India’s rich textile heritage with modern eco-friendly technology to create sustainable and globally adaptable solutions. Discover how we can help transform your spaces with craftsmanship, trust, and quality.",
     cta: {
       text: "Let's Talk",
       link: "/contact",
@@ -17,12 +16,17 @@ const footerData = {
     background: "/assets/img/home3.jpg",
   },
   contact: {
-    phone: "+34 567 721 12 35",
-    email: "info@Textura.com",
-    address: ["77 Kennedy Road", "Soho Manhattan", "New York - USA"],
+    phone: "+91 97406 43497",
+    email: "prabakar@texturaexports.com",
+    website: "www.texturaexports.com",
+    address: [
+      "3101, Prestige Sunrise Park Birchwood",
+      "Electronic City Phase 1",
+      "Bangalore - 560100, India",
+    ],
     animationDelays: ["200ms", "400ms", "600ms"],
   },
-  copyright: "Copyright © 2025 Textura, Inc. - All rights reserved.",
+  copyright: "Copyright © 2025 Textura Exports, Inc. - All rights reserved.",
 };
 
 const Footer = () => {
@@ -42,7 +46,10 @@ const Footer = () => {
                   </h2>
                 </div>
                 <hr />
-                <p className="text-white wow fadeInUp animated" data-wow-delay="400ms">
+                <p
+                  className="text-white wow fadeInUp animated"
+                  data-wow-delay="400ms"
+                >
                   {footerData.section.description}
                 </p>
                 <Link
@@ -50,7 +57,8 @@ const Footer = () => {
                   className={footerData.section.cta.className}
                   data-wow-delay={footerData.section.cta.delay}
                 >
-                  {footerData.section.cta.text} <i className={footerData.section.cta.icon} />
+                  {footerData.section.cta.text}{" "}
+                  <i className={footerData.section.cta.icon} />
                 </Link>
               </div>
             </div>
@@ -78,7 +86,14 @@ const Footer = () => {
                   data-wow-delay={footerData.contact.animationDelays[2]}
                 >
                   <h6 className="text-white">Directions</h6>
-                  <p>{footerData.contact.address.map((line, idx) => (<span key={idx}>{line}<br /></span>))}</p>
+                  <p>
+                    {footerData.contact.address.map((line, idx) => (
+                      <span key={idx}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
+                  </p>
                 </div>
               </div>
             </div>
