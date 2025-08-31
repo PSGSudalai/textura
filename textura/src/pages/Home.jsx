@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../components/HomeComponents/Hero";
+import Service from "../components/HomeComponents/Service";
 
 const Home = () => {
   return (
@@ -7,7 +8,7 @@ const Home = () => {
       <Hero/>
 
       {/* Off-canvas Area*/}
-      <div className="extra-info">
+      {/* <div className="extra-info">
         <div className="close-icon menu-close">
           <button>
             <i className="las la-times" />
@@ -48,104 +49,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="offcanvas-overlay" />
+      <div className="offcanvas-overlay" /> */}
 
-      {/* Service Section */}
-      <div id="project-1" className="project-section section-padding pb-0">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-5 col-lg-6 col-md-7">
-              <div className="section-title">
-                <h2 className="visible-slowly-right">
-                  Real Textura projects, real customer satisfaction
-                </h2>
-                <p className="pt-20 wow fadeInUp animated" data-wow-delay=".4s">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-              </div>
-            </div>
-            <div className="col-xl-7 col-lg-6 col-md-5 text-md-end">
-              <a href="#" className="bordered-btn">
-                View All Projects <i className="fa-light fa-arrow-right" />
-              </a>
-            </div>
-          </div>
-          <div className="row project-wrapper">
-            <div className="project-slider owl-carousel">
-              <div
-                className="single-project-item"
-                style={{ maxWidth: 432, maxHeight: 432 }}
-              >
-                <div
-                  className="project-bg"
-                  style={{ maxWidth: 432, maxHeight: 432 }}
-                >
-                  <img src="assets/img/img1.jpg" alt="" />
-                </div>
-                <div className="project-info">
-                  <h6>Luxury Produucts</h6>
-                </div>
-              </div>
-              <div className="single-project-item">
-                <div
-                  className="project-bg"
-                  style={{ maxWidth: 432, maxHeight: 432 }}
-                >
-                  <img src="assets/img/img6.jpg" alt="" />
-                </div>
-                <div
-                  className="project-info"
-                  style={{ maxWidth: 432, maxHeight: 432 }}
-                >
-                  <h6>Textura Products</h6>
-                </div>
-              </div>
-              <div className="single-project-item">
-                <div
-                  className="project-bg"
-                  style={{ maxWidth: 432, maxHeight: 432 }}
-                >
-                  <img src="assets/img/img1.jpg" alt="" />
-                </div>
-                <div className="project-info">
-                  <h6> Textura Products</h6>
-                </div>
-              </div>
-              <div className="single-project-item">
-                <div
-                  className="project-bg"
-                  style={{ maxWidth: 432, maxHeight: 432 }}
-                >
-                  <img src="assets/img/img6.jpg" alt="" />
-                </div>
-                <div className="project-info">
-                  <h6>Essentials Products</h6>
-                </div>
-              </div>
-              <div className="single-project-item">
-                <div
-                  className="project-bg"
-                  style={{ maxWidth: 432, maxHeight: 432 }}
-                >
-                  <img src="assets/img/img1.jpg" alt="" />
-                </div>
-                <div className="project-info">
-                  <h6> Textura Products</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Service/>
 
       <div id="service-2" className="service-section section-padding pb-0 pt-0">
         <div className="container">
@@ -657,41 +563,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* Search Dropdown */}
-      <div className="search-popup">
-        <span className="search-back-drop" />
-        <div className="search-inner">
-          <div className="container">
-            <div className="logo">
-              <a className="navbar-brand" href="index.html">
-                <img src="assets/img/logo-white.png" alt="" />
-              </a>
-            </div>
-            <button className="close-search">
-              <span className="la la-times" />
-            </button>
-            <form
-              method="post"
-              action="https://capricorn-theme.com/html/Textura/index.html"
-            >
-              <div className="form-group">
-                <input
-                  type="search"
-                  name="search-field"
-                  defaultValue=""
-                  placeholder="Type your keyword"
-                  required=""
-                />
-                <button type="submit">
-                  <i className="fal fa-search" />
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
 
     </div>
   );

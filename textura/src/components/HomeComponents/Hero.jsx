@@ -1,120 +1,86 @@
 import React from "react";
 
 const Hero = () => {
+  const heroData = [
+    {
+      id: 1,
+      bg: "/assets/img/home1.jpg",
+      overlay: "overlay-4",
+      subtitle: "Premium Export",
+      title: (
+        <>
+          <span>Transform</span> Your Space <br /> One Textura At A Time
+        </>
+      ),
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+      buttonText: "Our Services",
+      buttonLink: "#",
+    },
+    {
+      id: 2,
+      bg: "/assets/img/home1.jpg",
+      overlay: "overlay-5",
+      subtitle: "Durable Design",
+      title: (
+        <>
+          <span>Textura</span> Export: Your <br /> Foundation For Style
+        </>
+      ),
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries...",
+      buttonText: "Our Services",
+      buttonLink: "#",
+    },
+    {
+      id: 3,
+      bg: "/assets/img/home2.jpg",
+      overlay: "overlay-4",
+      subtitle: "Durable Design",
+      title: (
+        <>
+          Your <span>Dream</span> Floors, <br /> Our Expert Installation
+        </>
+      ),
+      description:
+        "Vestibulum rhoncus nisl ac gravida porta. Mauris eu sapien lacus. Etiam molestie justo neque...",
+      buttonText: "Our Services",
+      buttonLink: "#",
+    },
+  ];
+
   return (
     <div>
-      {/* Hero Area */}
       <div id="home-1" className="homepage-slides owl-carousel">
-        <div
-          className="single-slide-item d-flex align-items-center"
-          data-background="/assets/img/home1.jpg"
-        >
-          <div className="overlay-4" />
-          <div className="hero-area-content">
-            <div className="container">
-              <div className="row align-items-center">
-                <div
-                  className="col-xl-12 col-lg-12 col-md-10 wow fadeInUp animated"
-                  data-wow-delay=".2s"
-                >
-                  <div className="section-title">
-                    <h6 className="text-white">Premium Export</h6>
-                    <h1 className="text-white">
-                      <span>Transform</span> Your Space <br />
-                      One Textura At A Time
-                    </h1>
+        {heroData.map((slide) => (
+          <div
+            key={slide.id}
+            className="single-slide-item d-flex align-items-center"
+            data-background={slide.bg}
+          >
+            <div className={slide.overlay} />
+            <div className="hero-area-content">
+              <div className="container">
+                <div className="row align-items-center">
+                  <div
+                    className="col-xl-12 col-lg-12 col-md-10 wow fadeInUp animated"
+                    data-wow-delay=".2s"
+                  >
+                    <div className="section-title">
+                      <h6 className="text-white">{slide.subtitle}</h6>
+                      <h1 className="text-white">{slide.title}</h1>
+                    </div>
+                    <p className="text-white">{slide.description}</p>
+                    <a href={slide.buttonLink} className="white-btn mt-40">
+                      {slide.buttonText}{" "}
+                      <i className="fa-light fa-arrow-right" />
+                    </a>
                   </div>
-                  <p className="text-white">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum..
-                  </p>
-                  <a href="#" className="white-btn mt-40">
-                    Our Services <i className="fa-light fa-arrow-right" />
-                  </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          className="single-slide-item d-flex align-items-center"
-          data-background="/assets/img/home1.jpg"
-        >
-          <div className="overlay-5" />
-          <div className="hero-area-content">
-            <div className="container">
-              <div className="row align-items-center">
-                <div
-                  className="col-xl-12 col-lg-12 col-md-10 wow fadeInUp animated"
-                  data-wow-delay=".2s"
-                >
-                  <div className="section-title">
-                    <h6 className="text-white">Duraable Design</h6>
-                    <h1 className="text-white">
-                      <span>Textura</span> Export: Your <br />
-                      Foundation For Style
-                    </h1>
-                  </div>
-                  <p className="text-white">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
-                  </p>
-                  <a href="#" className="white-btn mt-40">
-                    Our Services <i className="fa-light fa-arrow-right" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="single-slide-item d-flex align-items-center"
-          data-background="/assets/img/home2.jpg"
-        >
-          <div className="overlay-4" />
-          <div className="hero-area-content">
-            <div className="container">
-              <div className="row align-items-center">
-                <div
-                  className="col-xl-12 col-lg-12 col-md-10 wow fadeInUp animated"
-                  data-wow-delay=".2s"
-                >
-                  <div className="section-title">
-                    <h6 className="text-white">Duraable Design</h6>
-                    <h1 className="text-white">
-                      Your <span>Dream</span> Floors, <br />
-                      Our Expert Installation
-                    </h1>
-                  </div>
-                  <p className="text-white">
-                    Vestibulum rhoncus nisl ac gravida porta. Mauris eu sapien
-                    lacus. Etiam molestie justo neque, <br />
-                    in convallis massa tempus in.
-                  </p>
-                  <a href="#" className="white-btn mt-40">
-                    Our Services <i className="fa-light fa-arrow-right" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
