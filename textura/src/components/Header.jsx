@@ -19,23 +19,21 @@ const Header = () => {
                 {/* Main Menu  */}
                 <div className="main-menu d-none d-lg-block">
                   <ul>
-                    <li className="active">
+                    <li>
                       <Link className="navlink" to="/">
                         Home
                       </Link>
                     </li>
                     <li>
-                      <Link className="has-arrow" to="/services">
-                        Services
-                      </Link>
+                      <a href="" className="has-arrow navlink">Services</a>
                       <ul className="sub-menu">
                         <li>
-                          <Link to="/services/yamboo">Yamboo</Link>
+                          <a href="https://yamboo.com" target="_blank" rel="noopener noreferrer"> Yamboo </a>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <Link className="has-arrow" to="/about">
+                      <Link className="navlink" to="/about">
                         About Us
                       </Link>
                     </li>

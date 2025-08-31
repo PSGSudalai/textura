@@ -50,38 +50,43 @@ const Hero = () => {
   ];
 
   return (
-    <div>
-      <div id="home-1" className="homepage-slides owl-carousel">
-        {heroData.map((slide) => (
-          <div
-            key={slide.id}
-            className="single-slide-item d-flex align-items-center"
-            data-background={slide.bg}
-          >
-            <div className={slide.overlay} />
-            <div className="hero-area-content">
-              <div className="container">
-                <div className="row align-items-center">
-                  <div
-                    className="col-xl-12 col-lg-12 col-md-10 wow fadeInUp animated"
-                    data-wow-delay=".2s"
-                  >
-                    <div className="section-title">
-                      <h6 className="text-white">{slide.subtitle}</h6>
-                      <h1 className="text-white">{slide.title}</h1>
-                    </div>
-                    <p className="text-white">{slide.description}</p>
-                    <a href={slide.buttonLink} className="white-btn mt-40">
-                      {slide.buttonText}{" "}
-                      <i className="fa-light fa-arrow-right" />
-                    </a>
+    <div id="home-1" className="homepage-slides owl-carousel">
+      {heroData.map((slide) => (
+        <div
+          key={slide.id}
+          className="single-slide-item d-flex align-items-center"
+          style={{
+            backgroundImage: `url(${slide.bg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          {/* Overlay */}
+          <div className={slide.overlay} />
+
+          {/* Hero Content */}
+          <div className="hero-area-content">
+            <div className="container">
+              <div className="row align-items-center">
+                <div
+                  className="col-xl-12 col-lg-12 col-md-10 wow fadeInUp animated"
+                  data-wow-delay=".2s"
+                >
+                  <div className="section-title">
+                    <h6 className="text-white">{slide.subtitle}</h6>
+                    <h1 className="text-white">{slide.title}</h1>
                   </div>
+                  <p className="text-white">{slide.description}</p>
+                  <a href={slide.buttonLink} className="white-btn mt-40">
+                    {slide.buttonText} <i className="fa-light fa-arrow-right" />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
