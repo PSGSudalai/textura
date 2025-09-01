@@ -9,38 +9,31 @@ const CustomerReviews = () => {
   const reviews = [
     {
       img: "/assets/images/testimonial/user/1.png",
-      name: "Phoenix Baker",
-      occupation: "Client",
+      name: "Hotel Manager",
+      occupation: "California, USA",
       comment:
-        "Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna",
+        "We switched to Yamboo bamboo towels for our boutique hotel, and the response from our guests has been incredible. The towels are luxuriously soft, highly absorbent, and eco-friendly. We are proud to offer a product that aligns with our sustainability goals.",
     },
     {
       img: "/assets/images/testimonial/user/2.png",
-      name: "Phoenix Baker",
-      occupation: "Client",
+      name: "Retail Chain Buyer",
+      occupation: "New York, USA",
       comment:
-        "Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna",
+        "Textura Exports provided us with beautifully packaged bamboo hand towels and baby towels. The quality is exceptional, and their private-label service made it easy for us to sell under our own brand. Our eco-conscious customers love them!",
     },
     {
       img: "/assets/images/testimonial/user/3.png",
-      name: "Phoenix Baker",
-      occupation: "Client",
+      name: "Eco-Brand Founder",
+      occupation: "Austin, USA",
       comment:
-        "Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna",
+        "From order placement to timely delivery, Textura Exports has been a reliable partner. Their focus on quality and compliance gives us confidence in every shipment. We are excited to expand our bamboo product line with them.",
     },
     {
       img: "/assets/images/testimonial/user/2.png",
-      name: "Phoenix Baker",
-      occupation: "Client",
+      name: "E-commerce Buyer",
+      occupation: "London, UK",
       comment:
-        "Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna",
-    },
-    {
-      img: "/assets/images/testimonial/user/3.png",
-      name: "Phoenix Baker",
-      occupation: "Client",
-      comment:
-        "Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna",
+        "Professional, responsive, and transparent—working with Textura Exports has been smooth from start to finish. Their bamboo pillow covers have become a bestseller in our online store.",
     },
   ];
 
@@ -61,10 +54,10 @@ const CustomerReviews = () => {
       <div className="testimonial-area section-space-top-100 section-space-bottom-95">
         <div className="container-fluid px-10">
           <div className="section-title-wrap">
-            <h2 className="section-title mb-7">What Say Client</h2>
+            <h2 className="section-title mb-7">What Our Clients Say</h2>
             <p className="section-desc mb-10">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature
+              Real feedback from businesses that trust Textura Exports for their
+              eco-friendly bamboo textiles.
             </p>
           </div>
         </div>
@@ -88,7 +81,6 @@ const CustomerReviews = () => {
                 768: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
               }}
-              
             >
               {reviews.map((review, idx) => (
                 <SwiperSlide key={idx} style={{ padding: "10px" }}>
@@ -96,7 +88,7 @@ const CustomerReviews = () => {
                     <div className="user-info mb-3">
                       <div className="user-shape-wrap">
                         <div className="user-img">
-                          <img src={review.img} alt="User" />
+                          <img src={review.img} alt={review.name} />
                         </div>
                       </div>
                       <div className="user-content text-charcoal">
@@ -106,7 +98,7 @@ const CustomerReviews = () => {
                         </span>
                       </div>
                     </div>
-                    <p className="user-comment mb-6">{review.comment}</p>
+                    <p className="user-comment mb-6">“{review.comment}”</p>
                   </div>
                 </SwiperSlide>
               ))}

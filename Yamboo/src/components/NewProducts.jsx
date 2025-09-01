@@ -6,13 +6,12 @@ import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 
-// Shuffle helper
 const shuffleArray = (array) => {
   return [...array].sort(() => Math.random() - 0.5);
 };
 
 const NewProducts = () => {
-  const randomProducts = useMemo(() => shuffleArray(products).slice(0, 4), []);
+  const randomProducts = useMemo(() => shuffleArray(products), []);
 
   return (
     <div className="product-area section-space-top-100 section-space-bottom-90">
@@ -21,8 +20,8 @@ const NewProducts = () => {
           <div className="section-title-wrap without-tab">
             <h2 className="section-title">New Products</h2>
             <p className="section-desc">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature.
+              Explore our latest collection of sustainable bamboo textile
+              products, crafted for style, durability, and eco-conscious living.
             </p>
           </div>
           <div className="col-lg-12">
@@ -32,28 +31,32 @@ const NewProducts = () => {
               autoplay={{ delay: 3000, disableOnInteraction: false }}
               loop
               spaceBetween={30}
-              slidesPerView={4}
+              slidesPerView={5} // ✅ show 5 by default on desktop
               breakpoints={{
                 0: { slidesPerView: 1 },
                 576: { slidesPerView: 2 },
                 768: { slidesPerView: 3 },
-                992: { slidesPerView: 4 }
+                992: { slidesPerView: 4 },
+                1200: { slidesPerView: 5 }, // ✅ full 5 slides for large screens
               }}
               className="product-slider"
             >
               {randomProducts.map((product) => (
                 <SwiperSlide key={product.id} className="product-item">
                   <div className="product-img">
-                    <a href={`/product/${product.id}`}>
+                    <Link to={`/product/${product.id}`}>
                       <img
                         className="primary-img"
                         src={product.image}
                         alt={product.name}
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="product-content">
-                    <Link className="product-name" to={`/product/${product.id}`}>
+                    <Link
+                      className="product-name"
+                      to={`/product/${product.id}`}
+                    >
                       {product.name}
                     </Link>
                     <div className="price-box pb-1">
@@ -61,17 +64,6 @@ const NewProducts = () => {
                         ${product.price.toFixed(2)}
                       </span>
                     </div>
-                    {/* <div className="rating-box">
-                      <ul>
-                        {Array(5)
-                          .fill()
-                          .map((_, i) => (
-                            <li key={i}>
-                              <i className="fa fa-star"></i>
-                            </li>
-                          ))}
-                      </ul>
-                    </div> */}
                   </div>
                 </SwiperSlide>
               ))}
