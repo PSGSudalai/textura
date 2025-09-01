@@ -12,7 +12,6 @@ const shuffleArray = (array) => {
 };
 
 const NewProducts = () => {
-  // Select 4 random products only once (per page load)
   const randomProducts = useMemo(() => shuffleArray(products).slice(0, 4), []);
 
   return (
@@ -62,7 +61,7 @@ const NewProducts = () => {
                         ${product.price.toFixed(2)}
                       </span>
                     </div>
-                    <div className="rating-box">
+                    {/* <div className="rating-box">
                       <ul>
                         {Array(5)
                           .fill()
@@ -72,7 +71,7 @@ const NewProducts = () => {
                             </li>
                           ))}
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </SwiperSlide>
               ))}

@@ -26,7 +26,7 @@ const Products = () => {
                   <div className="price-box pb-1">
                     <span className="new-price">${product.price.toFixed(2)}</span>
                   </div>
-                  <div className="rating-box">
+                  {/* <div className="rating-box">
                     <ul>
                       {Array(5)
                         .fill()
@@ -36,7 +36,7 @@ const Products = () => {
                           </li>
                         ))}
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

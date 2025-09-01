@@ -1,12 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-<Link
-  className="btn btn-custom-size xl-size btn-Yamboo-primary"
-  to="/shop"
->
+<Link className="btn btn-custom-size xl-size btn-Yamboo-primary" to="/shop">
   Discover Now
-</Link>
+</Link>;
 const Banners = () => {
   const banners = [
     {
@@ -56,8 +53,8 @@ const Banners = () => {
                     <h3 className="title">{banner.title}</h3>
                     <div className="button-wrap">
                       <Link className={banner.btnClass} to={banner.link}>
-  Shop Now
-</Link>
+                        Explore
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -80,7 +77,7 @@ const Banners = () => {
                         <h3 className="title">{banner.title}</h3>
                         <div className="button-wrap">
                           <a className={banner.btnClass} href={banner.link}>
-                            Shop Now
+                            Explore
                           </a>
                         </div>
                       </div>

@@ -12,7 +12,7 @@ const HomeAdd = () => {
     discountSuffix: "Off",
     link: "/shop",
     btnClass: "btn btn-custom-size btn-Yamboo-primary",
-    btnText: "Shop Now",
+    btnText: "Explore",
   };
 
   // Counter data

@@ -89,9 +89,9 @@ const Footer = () => {
                     <li>
                       <a href="#">About Yamboo</a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a href="#">Shop</a>
-                    </li>
+                    </li> */}
                     <li>
                       <a href="#">Contact us</a>
                     </li>
