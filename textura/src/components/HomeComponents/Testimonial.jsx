@@ -1,4 +1,10 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
+import img from "../img/quote.png";
 
 const Testimonial = () => {
   const testimonialData = {
@@ -8,14 +14,14 @@ const Testimonial = () => {
     testimonials: [
       {
         id: 1,
-        quoteImg: "/assets/img/quote.png",
+        quoteImg: img,
         text: "I couldn’t be happier with my new hardwood floors from Florz Flooring! The team was professional, attentive, and guided me through every step of the process. The installation was seamless, and the quality of the work is outstanding. Highly recommend!",
         author: "James Clark",
         position: "CEO, Alfa Inc.",
       },
       {
         id: 2,
-        quoteImg: "/assets/img/quote.png",
+        quoteImg: img,
         text: "The quality and finish of the flooring exceeded our expectations. From consultation to installation, the process was flawless. Definitely recommending Florz Flooring to friends and family!",
         author: "Sarah Johnson",
         position: "Manager, Beta Ltd.",
@@ -26,25 +32,38 @@ const Testimonial = () => {
   return (
     <div className="testimonial-section section-padding">
       <div className="container">
-        
-        <div className="row">
+        {/* Section Header */}
+        <div className="row align-items-center">
           <div className="col-xl-5 col-lg-6 col-md-7">
             <div className="section-title">
-              <h2 className="visible-slowly-right">{testimonialData.sectionTitle}</h2>
+              <h2 className="visible-slowly-right">
+                {testimonialData.sectionTitle}
+              </h2>
             </div>
           </div>
           <div className="col-xl-7 col-lg-6 col-md-5 text-md-end">
             <a href={testimonialData.buttonLink} className="bordered-btn">
-              {testimonialData.buttonText} <i className="fa-light fa-arrow-right" />
+              {testimonialData.buttonText}{" "}
+              <i className="fa-light fa-arrow-right" />
             </a>
           </div>
         </div>
 
-        {/* Testimonials */}
-        <div className="row">
-          <div className="testimonial-one owl-carousel">
-            {testimonialData.testimonials.map((item) => (
-              <div key={item.id} className="single-testimonial-item">
+        {/* Swiper Testimonials */}
+        <Swiper
+          modules={[Pagination, Autoplay]} // Removed Navigation
+          spaceBetween={20}
+          slidesPerView={1} // Always 1 testimonial
+          pagination={{ clickable: true }} // Only dots
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: true, // Stops autoplay on swipe/touch
+            pauseOnMouseEnter: true, // Also pauses when hovered (desktop)
+          }}
+        >
+          {testimonialData.testimonials.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div className="single-testimonial-item">
                 <div className="testimonial-quote">
                   <img src={item.quoteImg} alt="quote" />
                 </div>
@@ -58,9 +77,9 @@ const Testimonial = () => {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

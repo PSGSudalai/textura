@@ -19,21 +19,21 @@ const CustomerReviews = () => {
       name: "Retail Chain Buyer",
       occupation: "New York, USA",
       comment:
-        "Textura Exports provided us with beautifully packaged bamboo hand towels and baby towels. The quality is exceptional, and their private-label service made it easy for us to sell under our own brand. Our eco-conscious customers love them!",
+        "Yamboo provided us with beautifully packaged bamboo hand towels and baby towels. The quality is exceptional, and their private-label service made it easy for us to sell under our own brand. Our eco-conscious customers love them!",
     },
     {
       img: "/assets/images/testimonial/user/3.png",
       name: "Eco-Brand Founder",
       occupation: "Austin, USA",
       comment:
-        "From order placement to timely delivery, Textura Exports has been a reliable partner. Their focus on quality and compliance gives us confidence in every shipment. We are excited to expand our bamboo product line with them.",
+        "From order placement to timely delivery, Yamboo has been a reliable partner. Their focus on quality and compliance gives us confidence in every shipment. We are excited to expand our bamboo product line with them.",
     },
     {
       img: "/assets/images/testimonial/user/2.png",
       name: "E-commerce Buyer",
       occupation: "London, UK",
       comment:
-        "Professional, responsive, and transparent—working with Textura Exports has been smooth from start to finish. Their bamboo pillow covers have become a bestseller in our online store.",
+        "Professional, responsive, and transparent—working with Yamboo has been smooth from start to finish. Their bamboo pillow covers have become a bestseller in our online store.",
     },
   ];
 
@@ -56,7 +56,7 @@ const CustomerReviews = () => {
           <div className="section-title-wrap">
             <h2 className="section-title mb-7">What Our Clients Say</h2>
             <p className="section-desc mb-10">
-              Real feedback from businesses that trust Textura Exports for their
+              Real feedback from businesses that trust Yamboo for their
               eco-friendly bamboo textiles.
             </p>
           </div>

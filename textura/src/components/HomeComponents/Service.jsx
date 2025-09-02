@@ -1,18 +1,32 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import img1 from "../img/img1.jpg";
+import img2 from "../img/img6.jpg";
+import img3 from "../img/img2.jpg";
+// import img1 from "../img/img1.jpg";
+// import img1 from "../img/img1.jpg";
+// import img1 from "../img/img1.jpg";
+
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Service = () => {
   const serviceData = {
-    sectionTitle: "Real Textura projects, real customersdfsdfasdf",
+    sectionTitle: "Real Textura projects, real customers",
     sectionDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it...",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry's standard dummy text ever since the 1500s...",
     buttonText: "View All Projects",
     buttonLink: "#",
     projects: [
-      { id: 1, img: "/assets/img/img1.jpg", title: "Luxury Products" },
-      { id: 2, img: "/assets/img/img6.jpg", title: "Textura Products" },
-      { id: 3, img: "/assets/img/img1.jpg", title: "Textura Products" },
-      { id: 4, img: "/assets/img/img6.jpg", title: "Essentials Products" },
-      { id: 5, img: "/assets/img/img1.jpg", title: "Textura Products" },
+      { id: 1, img: img1, title: "Luxury Products" },
+      { id: 2, img: img2, title: "Textura Products" },
+      { id: 3, img: img3, title: "Textura Products" },
+      { id: 4, img: img1, title: "Essentials Products" },
+      { id: 5, img: img2, title: "Textura Products" },
     ],
   };
 
@@ -20,13 +34,13 @@ const Service = () => {
     <div id="project-1" className="project-section section-padding pb-0">
       <div className="container">
         {/* Section Heading */}
-        <div className="row">
+        <div className="row align-items-center">
           <div className="col-xl-5 col-lg-6 col-md-7">
             <div className="section-title">
-              <h2 className="visible-slowly-right">{serviceData.sectionTitle}</h2>
-              <p className="pt-20 wow fadeInUp animated" data-wow-delay=".4s">
-                {serviceData.sectionDescription}
-              </p>
+              <h2 className="visible-slowly-right">
+                {serviceData.sectionTitle}
+              </h2>
+              <p className="pt-20">{serviceData.sectionDescription}</p>
             </div>
           </div>
           <div className="col-xl-7 col-lg-6 col-md-5 text-md-end">
@@ -36,28 +50,41 @@ const Service = () => {
           </div>
         </div>
 
-        {/* Project Slider */}
-        <div className="row project-wrapper">
-          <div className="project-slider owl-carousel">
+        {/* Project Swiper Carousel */}
+        <div className="row project-wrapper mt-4">
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={3}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
             {serviceData.projects.map((project) => (
-              <div
-                key={project.id}
-                className="single-project-item"
-                style={{ maxWidth: 432, maxHeight: 432 }}
-              >
-                <div className="project-bg">
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                  />
+              <SwiperSlide key={project.id}>
+                <div className="single-project-item" style={{ maxWidth: 432 }}>
+                  <div className="project-bg">
+                    <img
+                      src={project.img}
+                      alt={project.title}
+                      style={{
+                        width: "100%",
+                        height: "300px",
+                        objectFit: "cover",
+                        borderRadius: "12px",
+                      }}
+                    />
+                  </div>
+                  <div className="project-info mt-3 text-center">
+                    <h6>{project.title}</h6>
+                  </div>
                 </div>
-                <div className="project-info">
-                  <h6>{project.title}</h6>
-                </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </div>
       </div>
     </div>

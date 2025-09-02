@@ -3329,7 +3329,7 @@ blockquote p {
 }
 .footer-widget-list-item > li i {
   margin-right: 20px;
-  color: #df414b;
+  color: #75b143;
 }
 .footer-widget-list-item > li a {
   color: #000000;
@@ -4360,6 +4360,9 @@ blockquote p {
 .banner-with-counter .counter-item .count-wrap .prefix {
   line-height: 1;
 }
+/* .count-title{
+  font-size: 24px;
+} */
 .banner-with-counter .counter-item .count-title {
   color: #3b3b3b;
   font-weight: 300;
@@ -5558,12 +5561,12 @@ blockquote p {
   margin-bottom: 20px;
 }
 .contact-list li i {
-  background-color: rgb(255, 255, 255);
-  color: #75b143;
+  /* background-color: rgb(255, 255, 255); */
+  color: #ffffff;
   border-radius: 100%;
   font-size: 25px;
   display: block;
-  width: 50px;
+  /* width: 50px; */
   height: 50px;
   line-height: 50px;
   text-align: center;

@@ -25,8 +25,8 @@ const Header = () => {
                 <div className="d-flex justify-content-end">
                   <div className="header-contact d-none d-lg-flex">
                     <i className="pe-7s-call"></i>
-                    <a href="tel://+00-123-456-789" style={{ color: "white" }}>
-                      +00 123 456 789
+                    <a href="tel://+91 97406 43497" style={{ color: "white" }}>
+                      +91 97406 43497
                     </a>
                   </div>
                 </div>

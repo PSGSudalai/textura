@@ -1,99 +1,131 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
     <div>
-        
       <div
-        class="footer-area"
+        className="footer-area"
         data-bg-image="/assets/images/footer/bg/1-1920x465.jpg"
       >
-        <div class="footer-top section-space-top-100 pb-60">
-          <div class="container">
-            <div class="row" style={{justifyContent:"space-between"}}>
-              <div class="col-lg-3">
-                <div class="footer-widget-item">
-                  <div class="footer-widget-logo">
-                    <a href="index.html">
+        <div className="footer-top section-space-top-100 pb-60">
+          <div className="container">
+            <div className="row" style={{ justifyContent: "space-between" }}>
+              {/* Company Info */}
+              <div className="col-lg-3">
+                <div className="footer-widget-item">
+                  <div className="footer-widget-logo">
+                    <a href="/">
                       <img src="/assets/images/logo/dark.png" alt="Logo" />
                     </a>
                   </div>
-                  <p class="footer-widget-desc">
-                    Lorem ipsum dolor sit amet, consec adipisl elit, sed do
-                    eiusmod tempor
-                    <br />
-                    incidio ut labore et dolore magna.
+                  <p className="footer-widget-desc">
+                    At <strong>Yamboo</strong>, we specialize in premium
+                    bamboo-based textiles crafted for luxury, sustainability,
+                    and comfort. Our eco-friendly fabrics are designed with care
+                    for your lifestyle and the planet.
                   </p>
-                  <div class="social-link with-border">
+                  <div className="social-link with-border">
                     <ul>
                       <li>
                         <a
-                          href="#"
+                          href="https://facebook.com/"
+                          target="_blank"
+                          rel="noreferrer"
                           data-tippy="Facebook"
-                          data-tippy-inertia="true"
-                          data-tippy-animation="shift-away"
-                          data-tippy-delay="50"
-                          data-tippy-arrow="true"
-                          data-tippy-theme="sharpborder"
                         >
-                          <i class="fa fa-facebook"></i>
+                          <i className="fa fa-facebook"></i>
                         </a>
                       </li>
                       <li>
                         <a
-                          href="#"
-                          data-tippy="Twitter"
-                          data-tippy-inertia="true"
-                          data-tippy-animation="shift-away"
-                          data-tippy-delay="50"
-                          data-tippy-arrow="true"
-                          data-tippy-theme="sharpborder"
+                          href="https://instagram.com/"
+                          target="_blank"
+                          rel="noreferrer"
+                          data-tippy="Instagram"
                         >
-                          <i class="fa fa-twitter"></i>
+                          <i className="fa fa-instagram"></i>
                         </a>
                       </li>
                       <li>
                         <a
-                          href="#"
-                          data-tippy="Pinterest"
-                          data-tippy-inertia="true"
-                          data-tippy-animation="shift-away"
-                          data-tippy-delay="50"
-                          data-tippy-arrow="true"
-                          data-tippy-theme="sharpborder"
+                          href="https://linkedin.com/"
+                          target="_blank"
+                          rel="noreferrer"
+                          data-tippy="LinkedIn"
                         >
-                          <i class="fa fa-pinterest"></i>
+                          <i className="fa fa-linkedin"></i>
                         </a>
                       </li>
                       <li>
                         <a
-                          href="#"
-                          data-tippy="Dribbble"
-                          data-tippy-inertia="true"
-                          data-tippy-animation="shift-away"
-                          data-tippy-delay="50"
-                          data-tippy-arrow="true"
-                          data-tippy-theme="sharpborder"
+                          href="https://wa.me/919740643497"
+                          target="_blank"
+                          rel="noreferrer"
+                          data-tippy="WhatsApp"
                         >
-                          <i class="fa fa-dribbble"></i>
+                          <i className="fa fa-whatsapp"></i>
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-4 pt-40">
-                <div class="footer-widget-item">
-                  <h3 class="footer-widget-title">Useful Links</h3>
-                  <ul class="footer-widget-list-item">
+
+              {/* Useful Links */}
+              <div className="col-lg-2 col-md-4 pt-40">
+                <div className="footer-widget-item">
+                  <h3 className="footer-widget-title">Useful Links</h3>
+                  <ul className="footer-widget-list-item">
                     <li>
-                      <a href="#">About Yamboo</a>
+                      <a href="/about">About Us</a>
                     </li>
-                    {/* <li>
-                      <a href="#">Shop</a>
-                    </li> */}
                     <li>
-                      <a href="#">Contact us</a>
+                      <a href="/products">Products</a>
+                    </li>
+                    <li>
+                      <a href="/contact">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="col-lg-4 col-md-6 pt-40">
+                <div className="footer-widget-item">
+                  <h3 className="footer-widget-title">Contact Info</h3>
+                  <ul className="footer-widget-list-item">
+                    <li>
+                      <i className="fa fa-map-marker"></i> Prestige Sunrise Park
+                      Birchwood, Electronic City Phase 1, Bangalore – 560100
+                    </li>
+                    <li>
+                      <i className="fa fa-user"></i> Managing Director: Prabakar
+                    </li>
+                    <li>
+                      <i className="fa fa-phone"></i>{" "}
+                      <a href="tel:+919740643497">+91 97406 43497</a>
+                    </li>
+                    <li>
+                      <i className="fa fa-envelope"></i>{" "}
+                      <a href="mailto:Prabakar@texturaexports.com">
+                        Prabakar@texturaexports.com
+                      </a>
+                    </li>
+                    <li>
+                      <i className="fa fa-envelope"></i>{" "}
+                      <a href="mailto:Sales@texturaexports.com">
+                        Sales@texturaexports.com
+                      </a>
+                    </li>
+                    <li>
+                      <i className="fa fa-globe"></i>{" "}
+                      <a
+                        href="https://texturaexports.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        www.texturaexports.com
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -101,14 +133,17 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="copyright">
-                  <span class="copyright-text"
-                    >© 2021 Yamboo Made with
-                    <i class="fa fa-heart text-danger"></i> by Alpha
+
+        {/* Footer Bottom */}
+        <div className="footer-bottom">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="copyright">
+                  <span className="copyright-text">
+                    © {new Date().getFullYear()} <strong>Yamboo</strong> | All
+                    Rights Reserved | Made with{" "}
+                    <i className="fa fa-heart text-danger"></i> in India
                   </span>
                 </div>
               </div>
@@ -117,7 +152,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

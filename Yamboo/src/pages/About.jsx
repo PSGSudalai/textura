@@ -1,44 +1,39 @@
 import React from "react";
 import Breadcrumb from "../components/BreadCrumb";
 
-
 const breadcrumbData = {
   title: "Contact",
-  links: [
-    { to: "/", label: "Home" },
-    { label: "Contact Us" }
-  ]
+  links: [{ to: "/", label: "Home" }, { label: "Contact Us" }],
 };
 
 const aboutData = {
   title: "Our Story",
-  description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-    occaecat cupidatat non proident, sunt in culpa qui officia
-    deserunt mollit anim id est laborum. Sed ut perspiciatis`,
-  signatureImg: "/assets/images/about/icon/2.png"
+  description: `At Yamboo, we are committed to delivering premium quality
+  textile products that combine luxury, sustainability, and comfort. 
+  Our journey began with a vision to provide eco-friendly solutions 
+  that not only meet international standards but also bring 
+  long-lasting value to our customers. With a focus on bamboo-based 
+  fabrics and innovative designs, we ensure every product reflects 
+  superior craftsmanship, durability, and style.`,
+  signatureImg: "/assets/images/about/icon/2.png",
 };
 
 const shippingData = [
   {
     icon: "/assets/images/shipping/icon/car.png",
-    title: "Free Shipping",
-    desc: "Capped at $319 per order"
-  },
-  {
-    icon: "/assets/images/shipping/icon/card.png",
-    title: "Safe Payment",
-    desc: "With our payment gateway"
+    title: "Premium Quality",
+    desc: "Crafted with the finest bamboo fibers for luxury & durability.",
   },
   {
     icon: "/assets/images/shipping/icon/service.png",
-    title: "Best Services",
-    desc: "Friendly & Supper Services"
-  }
+    title: "Customer Support",
+    desc: "We’re here to assist you with quick and friendly service.",
+  },
+  {
+    icon: "/assets/images/shipping/icon/card.png",
+    title: "Eco-Friendly",
+    desc: "100% hypoallergenic, and safe for sensitive skin.",
+  },
 ];
 
 const contactInfoData = {
@@ -46,14 +41,40 @@ const contactInfoData = {
   title: "Contact Info:",
   desc: "Fill the form and our team will get back to you within 24 hours.",
   contacts: [
-    { icon: "pe-7s-call", link: "tel://123-456-789", text: "123 456 789" },
     {
-      icon: "pe-7s-mail",
-      link: "mailto://info@example.com",
-      text: "info@example.com"
+      icon: "pe-7s-map-marker",
+      text: "Prestige Sunrise Park Birchwood, Electronic City Phase 1, Bangalore – 560100",
     },
-    { icon: "pe-7s-map-marker", text: "13, Your Address, Here" }
-  ]
+    {
+      icon: "pe-7s-call",
+      link: "tel://+919740643497",
+      text: "+91 97406 43497",
+    },
+    // {
+    //   icon: "pe-7s-user",
+    //   text: "Managing Director: Prabakar"
+    // },
+    // {
+    //   icon: "pe-7s-chat",
+    //   link: "https://wa.me/919740643497",
+    //   text: "WhatsApp: +91 97406 43497"
+    // },
+    // {
+    //   icon: "pe-7s-global",
+    //   link: "https://texturaexports.com",
+    //   text: "www.texturaexports.com"
+    // },
+    // {
+    //   icon: "pe-7s-mail",
+    //   link: "mailto:Prabakar@texturaexports.com",
+    //   text: "Prabakar@texturaexports.com"
+    // },
+    // {
+    //   icon: "pe-7s-mail",
+    //   link: "mailto:Sales@texturaexports.com",
+    //   text: "Sales@texturaexports.com"
+    // }
+  ],
 };
 
 const About = () => {
@@ -112,7 +133,10 @@ const About = () => {
         </div>
 
         {/* Contact Form */}
-        <div id="contact-form-section" className="contact-form-area section-space-y-axis-100">
+        <div
+          id="contact-form-section"
+          className="contact-form-area section-space-y-axis-100"
+        >
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -120,7 +144,8 @@ const About = () => {
                   <div
                     className="contact-info text-white"
                     style={{
-                      backgroundImage: contactInfoData.backgroundImg
+                      backgroundImage: contactInfoData.backgroundImg,
+                      backgroundRepeat: "round",
                     }}
                   >
                     <h2 className="contact-title">{contactInfoData.title}</h2>
@@ -138,11 +163,7 @@ const About = () => {
                       ))}
                     </ul>
                   </div>
-                  <form
-                    id="contact-form"
-                    className="contact-form"
-                    action=""
-                  >
+                  <form id="contact-form" className="contact-form" action="">
                     <div className="group-input">
                       <div className="form-field me-lg-30 mb-35 mb-lg-0">
                         <input

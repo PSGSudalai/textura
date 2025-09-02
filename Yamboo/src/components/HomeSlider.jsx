@@ -34,8 +34,8 @@ const HomeSlider = () => {
           prevEl: ".slide-button-prev",
         }}
         autoplay={{
-          delay: 3000, // 3 seconds
-          disableOnInteraction: false, // keeps autoplay after user interaction
+          delay: 3000,
+          disableOnInteraction: false,
         }}
         loop={true}
         className="main-slider-2 swiper-arrow with-bg_white"
@@ -48,20 +48,21 @@ const HomeSlider = () => {
             >
               <div className="slide-content text-black">
                 <h2 className="title">
-                  Indoor <br />
-                  Planters
+                  Sustainable <br />
+                  Textiles
                 </h2>
                 <p className="short-desc">
-                  Yamboo, With 100% Natural, Organic & Plant Shop.
+                  Crafted with care from eco-friendly bamboo for lasting
+                  comfort.
                 </p>
-                <div className="btn-wrap">
 
-                <Link
+                <div className="btn-wrap">
+                  {/* <Link
                   className="btn btn-custom-size xl-size btn-Yamboo-primary"
                   to="/shop"
                 >
                   Discover Now
-                </Link>
+                </Link> */}
                 </div>
               </div>
               <div className="slide-img">

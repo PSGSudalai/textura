@@ -62,7 +62,7 @@ const About = () => {
       },
     ],
   };
-
+``
   return (
     <>
       {/* Breadcrumb */}

@@ -6,34 +6,35 @@ import { Link } from "react-router-dom";
 </Link>;
 const Banners = () => {
   const banners = [
-    {
-      type: "large", // large left-side banner
-      img: "/assets/images/banner/2-1-570x500.jpg",
-      collection: "New Collection",
-      title: "Indoore Plant",
-      link: "/shop",
-      btnClass: "btn btn-custom-size btn-Yamboo-primary",
-      position: "text-position-center",
-    },
-    {
-      type: "small", // top-right banner
-      img: "/assets/images/banner/2-2-570x235.jpg",
-      collection: "Collection Of Cactus",
-      title: "Plant Port",
-      link: "/shop",
-      btnClass: "btn btn-custom-size sm-size btn-Yamboo-primary",
-      position: "text-position-left",
-    },
-    {
-      type: "small", // bottom-right banner
-      img: "/assets/images/banner/2-3-570x235.jpg",
-      collection: "Collection Of Cactus",
-      title: "Hanging Pots",
-      link: "/shop",
-      btnClass: "btn btn-custom-size sm-size btn-Yamboo-primary",
-      position: "text-position-left",
-    },
-  ];
+  {
+    type: "large", // large left-side banner
+    img: "/assets/images/banner/2-1-570x500.jpg",
+    collection: "Premium Collection",
+    title: "Bamboo Bath Towels",
+    link: "/shop",
+    btnClass: "btn btn-custom-size btn-Yamboo-primary",
+    position: "text-position-center",
+  },
+  {
+    type: "small", // top-right banner
+    img: "/assets/images/banner/2-2-570x235.jpg",
+    collection: "Gentle Care",
+    title: "Face Towels",
+    link: "/shop",
+    btnClass: "btn btn-custom-size sm-size btn-Yamboo-primary",
+    position: "text-position-left",
+  },
+  {
+    type: "small", // bottom-right banner
+    img: "/assets/images/banner/2-3-570x235.jpg",
+    collection: "For Sensitive Skin",
+    title: "Baby Towels",
+    link: "/shop",
+    btnClass: "btn btn-custom-size sm-size btn-Yamboo-primary",
+    position: "text-position-left",
+  },
+];
+
 
   return (
     <div className="banner-area banner-style-2 section-space-top-100">
@@ -51,11 +52,11 @@ const Banners = () => {
                   <div className={`banner-content ${banner.position}`}>
                     <span className="collection">{banner.collection}</span>
                     <h3 className="title">{banner.title}</h3>
-                    <div className="button-wrap">
+                    {/* <div className="button-wrap">
                       <Link className={banner.btnClass} to={banner.link}>
                         Explore
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}
@@ -75,11 +76,11 @@ const Banners = () => {
                       <div className={`banner-content ${banner.position}`}>
                         <span className="collection">{banner.collection}</span>
                         <h3 className="title">{banner.title}</h3>
-                        <div className="button-wrap">
+                        {/* <div className="button-wrap">
                           <a className={banner.btnClass} href={banner.link}>
                             Explore
                           </a>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
