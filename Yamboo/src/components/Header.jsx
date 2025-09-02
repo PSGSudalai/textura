@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { IoClose } from "react-icons/io5";
+import { FiMenu, FiX } from "react-icons/fi";
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -76,7 +77,8 @@ const Header = () => {
                           className="mobile-menu_btn toolbar-btn pl-0"
                           aria-label="Open mobile menu"
                         >
-                          <i className="pe-7s-menu"></i>
+                          {/* <i className="pe-7s-menu"></i> */}
+                          <FiMenu size={28} />
                         </button>
                       </li>
                     </ul>
@@ -99,13 +101,15 @@ const Header = () => {
                   onClick={closeMobileMenu}
                   className="button-close"
                   aria-label="Close mobile menu"
+                  style={{color:"black"}}
                 >
-                  <i className="pe-7s-close"></i>
+                  {/* <i className="pe-7s-close">X</i> */}
+                  <FiX size={28} />
                 </button>
               </div>
               <div className="header-contact offcanvas-contact">
                 <i className="pe-7s-call"></i>
-                <a href="tel://+00-123-456-789">+00 123 456 789</a>
+                <a href="tel://+91 97406 43497">+91 97406 43497</a>
               </div>
               <div className="offcanvas-menu_area">
                 <nav className="offcanvas-navigation">
