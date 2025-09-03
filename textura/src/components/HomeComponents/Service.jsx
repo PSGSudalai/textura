@@ -1,12 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import img1 from "../img/img1.jpg";
-import img2 from "../img/img6.jpg";
-import img3 from "../img/img2.jpg";
 // import img1 from "../img/img1.jpg";
-// import img1 from "../img/img1.jpg";
-// import img1 from "../img/img1.jpg";
+// import img2 from "../img/img6.jpg";
+// import img3 from "../img/img2.jpg";
+import img1 from "../img/product/1.jpg";
+import img2 from "../img/product/2.jpg";
+import img3 from "../img/product/3.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -21,8 +21,8 @@ const Service = () => {
     buttonText: "View All Projects",
     buttonLink: "#",
     projects: [
-      { id: 1, img: img1, title: "Luxury Bamboo Bath Towels" },
-      { id: 2, img: img2, title: "Hypoallergenic Bamboo Towels" },
+      { id: 1, img: img1, title: " Bamboo Paper Towels" },
+      { id: 2, img: img2, title: "Luxury Bamboo Bath Towels" },
       { id: 3, img: img3, title: "Eco-Friendly Bamboo Covers" },
     ],
   };

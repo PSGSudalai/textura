@@ -7,111 +7,38 @@ import Team from "../components/HomeComponents/Team";
 import Counter from "../components/HomeComponents/Counter";
 import Service2 from "../components/HomeComponents/Service2";
 
+const productImages = [
+  "/assets/img/product/1.jpg",
+  "/assets/img/product/2.jpg",
+  "/assets/img/product/3.jpg",
+  "/assets/img/product/4.jpg",
+  "/assets/img/product/5.jpg",
+  "/assets/img/product/6.jpg",
+];
+
 const Home = () => {
   return (
     <div>
       <Hero />
-
-      {/* Off-canvas Area*/}
-      {/* <div className="extra-info">
-        <div className="close-icon menu-close">
-          <button>
-            <i className="las la-times" />
-          </button>
-        </div>
-        <div className="logo-side">
-          <div className="logo">
-            <a href="index.html">
-              <img src="assets/img/logo-white.png" alt="" />
-            </a>
-          </div>
-        </div>
-        <div className="side-info">
-          <div className="contact-list mb-40">
-            <p>
-              Welcome to Textura, A Full Service of Flooring and Tilling Works.
-            </p>
-            <img src="assets/img/1.jpg" alt="" />
-            <div className="mt-30 mb-30">
-              <a href="contact.html" className="white-btn">
-                Get In Touch
-              </a>
-            </div>
-          </div>
-          <div className="social-area-wrap">
-            <a href="#">
-              <i className="lab la-facebook-f" />
-            </a>
-            <a href="#">
-              <i className="lab la-instagram" />
-            </a>
-            <a href="#">
-              <i className="lab la-linkedin-in" />
-            </a>
-            <a href="#">
-              <i className="lab la-skype" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="offcanvas-overlay" /> */}
-
       <Service />
-
-      <Service2/>
+      <Service2 />
 
       {/* Gallery Section */}
       <div className="gallery-section gray-bg section-padding">
         <div className="container">
           <div className="row gy-4">
-            <div
-              className="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated"
-              data-wow-delay="200ms"
-            >
-              <a href="assets/img/img4.jpg" data-fancybox="gallery">
-                <img src="assets/img/img4.jpg" alt="" />
-              </a>
-            </div>
-            <div
-              className="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated"
-              data-wow-delay="400ms"
-            >
-              <a href="assets/img/img5.jpg" data-fancybox="gallery">
-                <img src="assets/img/img5.jpg" alt="" />
-              </a>
-            </div>
-            <div
-              className="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated"
-              data-wow-delay="600ms"
-            >
-              <a href="assets/img/img3.jpg" data-fancybox="gallery">
-                <img src="assets/img/img3.jpg" alt="" />
-              </a>
-            </div>
-            <div
-              className="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated"
-              data-wow-delay="200ms"
-            >
-              <a href="assets/img/img4.jpg" data-fancybox="gallery">
-                <img src="assets/img/img4.jpg" alt="" />
-              </a>
-            </div>
-            <div
-              className="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated"
-              data-wow-delay="400ms"
-            >
-              <a href="assets/img/img5.jpg" data-fancybox="gallery">
-                <img src="assets/img/img5.jpg" alt="" />
-              </a>
-            </div>
-            <div
-              className="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated"
-              data-wow-delay="600ms"
-            >
-              <a href="assets/img/img3.jpg" data-fancybox="gallery">
-                <img src="assets/img/img3.jpg" alt="" />
-              </a>
-            </div>
+            {productImages.map((img, idx) => (
+              <div
+                key={idx}
+                className="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft animated"
+                data-wow-delay={`${200 * ((idx % 3) + 1)}ms`}
+              >
+                <a href={img} data-fancybox="gallery">
+                  <img src={img} alt={`Product ${idx + 1}`} 
+                style={{ width: "300px", height: "250px"}} />
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -119,10 +46,8 @@ const Home = () => {
       <About />
 
       {/* Counter Section */}
-      
-      <Counter/>
+      <Counter />
       <Team />
-
       <Testimonial />
     </div>
   );

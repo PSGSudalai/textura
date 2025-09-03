@@ -5,8 +5,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
-import home1 from "../img/home1.jpg";
-import home2 from "../img/home2.jpg";
+import home2 from "../img/home1.jpg";
+import home1 from "../img/img9.jpg";
 import home3 from "../img/home3.jpg";
 
 const Hero = () => {

@@ -7,14 +7,14 @@ const About = () => {
       title: "Foundation of Textura Exports",
       description:
         "Founded in Bangalore, India, with a clear vision: to create a textile export business that is environmentally responsible and globally competitive.",
-      image: "assets/img/img1.jpg",
+      image: "assets/img/img4.jpg",
     },
     {
       year: "2025",
       title: "Launch of Yamboo",
       description:
         "Introduced our in-house sustainable brand Yamboo, starting with a premium range of towels, tissues, and pillow covers.",
-      image: "assets/img/img2.jpg",
+      image: "assets/img/img7.jpg",
     },
     {
       year: "2026 & Beyond",

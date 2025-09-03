@@ -8,8 +8,14 @@ const About = () => {
       "At Textura, we blend India’s rich textile heritage with modern, eco-conscious innovation. With over a decade of expertise, we continue to set benchmarks in quality and sustainability for households and businesses worldwide.",
     buttonText: "About Us",
     buttonLink: "/about",
-    image: "/assets/img/img1.jpg",
+    image: "/assets/img/img4.jpg",
     accordion: [
+      {
+        id: "aboutTwo",
+        title: "Mission",
+        text: "To deliver premium-quality bamboo textiles that redefine comfort, encourage sustainability, and bring eco-conscious living into every household and business across the globe.",
+        show: false,
+      },
       {
         id: "aboutOne",
         title: "Core Values",
@@ -32,12 +38,7 @@ const About = () => {
         ],
         show: true,
       },
-      {
-        id: "aboutTwo",
-        title: "Mission",
-        text: "To deliver premium-quality bamboo textiles that redefine comfort, encourage sustainability, and bring eco-conscious living into every household and business across the globe.",
-        show: false,
-      },
+      
       {
         id: "aboutThree",
         title: "Vision",
@@ -48,7 +49,7 @@ const About = () => {
   };
 
   return (
-    <div id="about-1" className="about-section section-padding">
+    <div id="about-1" className="about-section section-padding" style={{paddingBottom:"0px"}}>
       <div className="container">
         {/* Section Header */}
         <div className="row">
