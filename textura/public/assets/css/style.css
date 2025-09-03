@@ -3006,7 +3006,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 767px) {
   #service-2 .single-service-item {
-    padding-left: 0;
     text-align: center;
     margin-bottom: 0;
   }

@@ -38,16 +38,16 @@ const Service2 = () => {
               <div className="section-title">
                 <h6>Our Services</h6>
                 <h2 className="visible-slowly-right">
-                  Textura for Homes and Businesses
+                  Textura Exports Solutions for Global Partners
                 </h2>
               </div>
             </div>
             <div className="col-xl-2 col-lg-3 col-md-1" />
             <div className="col-xl-4 col-lg-4 col-md-5">
               <p className="pt-40">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s...
+                We provide end-to-end export solutions for eco-friendly bamboo textiles.
+                From sourcing and customization to private labeling and quality compliance,
+                our services are designed to make global partnerships seamless and sustainable.
               </p>
               <Link to="/services" className="details-link">
                 View All Services <i className="fa-light fa-arrow-right" />

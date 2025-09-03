@@ -39,7 +39,8 @@ export const Contact = () => {
         {
           type: "Address",
           value:
-            "3101, Prestige Sunrise Park Birchwood, Electronic City Phase 1, Bangalore - 560100, India",
+            "3101, Prestige Sunrise Park Birchwood, Electronic City Phase 1, Bangalore",
+          pincode:"560100, India",
           delay: "600ms",
         },
       ],
@@ -143,7 +144,8 @@ export const Contact = () => {
                     data-wow-delay={detail.delay}
                   >
                     <p>{detail.type}</p>
-                    <h4>{detail.value}</h4>
+                    <h4 style={{margin:"0px"}}>{detail.value}</h4>
+                    <h4 style={{margin:"0px"}}>{detail.pincode}</h4>
                   </div>
                 ))}
                 <div className="social-area">

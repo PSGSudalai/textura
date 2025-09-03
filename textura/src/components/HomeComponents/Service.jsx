@@ -8,7 +8,6 @@ import img3 from "../img/img2.jpg";
 // import img1 from "../img/img1.jpg";
 // import img1 from "../img/img1.jpg";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,17 +15,15 @@ import "swiper/css/pagination";
 
 const Service = () => {
   const serviceData = {
-    sectionTitle: "Real Textura projects, real customers",
+    sectionTitle: "Yamboo Products, Happy Customers",
     sectionDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry's standard dummy text ever since the 1500s...",
+      "From boutique hotels to retail stores, our premium bamboo textiles have delighted eco-conscious clients worldwide. Here are some of our recent products loved by our customers.",
     buttonText: "View All Projects",
     buttonLink: "#",
     projects: [
-      { id: 1, img: img1, title: "Luxury Products" },
-      { id: 2, img: img2, title: "Textura Products" },
-      { id: 3, img: img3, title: "Textura Products" },
-      { id: 4, img: img1, title: "Essentials Products" },
-      { id: 5, img: img2, title: "Textura Products" },
+      { id: 1, img: img1, title: "Luxury Bamboo Bath Towels" },
+      { id: 2, img: img2, title: "Hypoallergenic Bamboo Towels" },
+      { id: 3, img: img3, title: "Eco-Friendly Bamboo Covers" },
     ],
   };
 

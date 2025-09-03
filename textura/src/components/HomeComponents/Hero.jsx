@@ -15,46 +15,47 @@ const Hero = () => {
       id: 1,
       bg: home1,
       overlay: "overlay-4",
-      subtitle: "Premium Export",
+      subtitle: "Premium Bamboo Textiles",
       title: (
         <>
-          <span>Transform</span> Your Space <br /> One Textura At A Time
+          <span>Experience</span> Comfort <br /> With Sustainable Luxury
         </>
       ),
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-      buttonText: "Our Services",
-      buttonLink: "#",
+        "Discover our eco-friendly bamboo towels, hand towels, and pillow covers—designed for softness, durability, and a greener lifestyle.",
+      buttonText: "Explore Products",
+      buttonLink: "#products",
     },
     {
       id: 2,
       bg: home2,
       overlay: "overlay-5",
-      subtitle: "Durable Design",
+      subtitle: "Eco-Friendly Innovation",
       title: (
         <>
-          <span>Textura</span> Export: Your <br /> Foundation For Style
+          <span>Luxury</span> That Cares <br /> For You & The Planet
         </>
       ),
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries...",
-      buttonText: "Our Services",
-      buttonLink: "#",
+        "Our Yamboo products combine natural antibacterial properties with premium quality, offering skin-friendly, hypoallergenic, and sustainable solutions.",
+      buttonText: "View Collection",
+      buttonLink: "#collection",
     },
     {
       id: 3,
       bg: home3,
       overlay: "overlay-4",
-      subtitle: "Durable Design",
+      subtitle: "Trusted Worldwide",
       title: (
         <>
-          Your <span>Dream</span> Floors, <br /> Our Expert Installation
+          Bringing <span>Sustainable Textiles</span> <br /> To Homes &
+          Businesses Globally
         </>
       ),
       description:
-        "Vestibulum rhoncus nisl ac gravida porta. Mauris eu sapien lacus. Etiam molestie justo neque...",
-      buttonText: "Our Services",
-      buttonLink: "#",
+        "From hotels to eco-conscious retailers, we deliver bamboo textiles that meet international standards of quality, safety, and sustainability.",
+      buttonText: "Get In Touch",
+      buttonLink: "#contact",
     },
   ];
 
@@ -99,7 +100,8 @@ const Hero = () => {
                       </div>
                       <p className="text-white">{slide.description}</p>
                       <a href={slide.buttonLink} className="white-btn mt-40">
-                        {slide.buttonText} <i className="fa-light fa-arrow-right" />
+                        {slide.buttonText}{" "}
+                        <i className="fa-light fa-arrow-right" />
                       </a>
                     </div>
                   </div>
