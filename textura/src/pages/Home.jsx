@@ -20,11 +20,14 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <Service />
+      <div  id="products">
+        <Service/>  
+      </div>
+      
       <Service2 />
 
       {/* Gallery Section */}
-      <div className="gallery-section gray-bg section-padding">
+      <div className="gallery-section gray-bg section-padding" id="collection">
         <div className="container">
           <div className="row gy-4">
             {productImages.map((img, idx) => (

@@ -28,7 +28,7 @@ const Service = () => {
   };
 
   return (
-    <div id="project-1" className="project-section section-padding pb-0">
+    <div id="project-1 projects" className="project-section section-padding pb-0">
       <div className="container">
         {/* Section Heading */}
         <div className="row align-items-center">

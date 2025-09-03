@@ -29,8 +29,8 @@ const About = () => {
     sectionTitle: "Meet our skilled team of textile experts",
     sectionDescription:
       "We specialize in innovative textile solutions, offering sustainable fabrics, design expertise, and export-quality manufacturing for global markets.",
-    buttonText: "Our Team",
-    buttonLink: "/team",
+    buttonText: "Contact Our Team",
+    buttonLink: "/contact",
     members: [
       {
         id: 1,

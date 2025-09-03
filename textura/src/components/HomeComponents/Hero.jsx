@@ -55,7 +55,7 @@ const Hero = () => {
       description:
         "From hotels to eco-conscious retailers, we deliver bamboo textiles that meet international standards of quality, safety, and sustainability.",
       buttonText: "Get In Touch",
-      buttonLink: "#contact",
+      buttonLink: "/contact",
     },
   ];
 
