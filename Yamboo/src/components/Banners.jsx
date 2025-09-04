@@ -8,7 +8,7 @@ const Banners = () => {
   const banners = [
   {
     type: "large", // large left-side banner
-    img: "/assets/images/banner/2-1-570x500.jpg",
+    img: "/assets/images/newbanner/banner1.png",
     collection: "Premium Collection",
     title: "Bamboo Bath Towels",
     link: "/shop",
@@ -17,7 +17,7 @@ const Banners = () => {
   },
   {
     type: "small", // top-right banner
-    img: "/assets/images/banner/2-2-570x235.jpg",
+    img: "/assets/images/newbanner/banner2.png",
     collection: "Gentle Care",
     title: "Face Towels",
     link: "/shop",
@@ -26,9 +26,9 @@ const Banners = () => {
   },
   {
     type: "small", // bottom-right banner
-    img: "/assets/images/banner/2-3-570x235.jpg",
-    collection: "For Sensitive Skin",
-    title: "Baby Towels",
+    img: "/assets/images/newbanner/banner3.png",
+    collection: "Eco Friendy Reuseable",
+    title: "Paper Towels",
     link: "/shop",
     btnClass: "btn btn-custom-size sm-size btn-Yamboo-primary",
     position: "text-position-left",
@@ -50,8 +50,8 @@ const Banners = () => {
                     <img src={banner.img} alt="Banner" />
                   </div>
                   <div className={`banner-content ${banner.position}`}>
-                    <span className="collection">{banner.collection}</span>
-                    <h3 className="title">{banner.title}</h3>
+                    <span className="collection" style={{color:"#75b143"}}>{banner.collection}</span>
+                    <h3 className="title" style={{color:"#75b143"}}>{banner.title}</h3>
                     {/* <div className="button-wrap">
                       <Link className={banner.btnClass} to={banner.link}>
                         Explore
@@ -74,8 +74,8 @@ const Banners = () => {
                         <img src={banner.img} alt="Banner" />
                       </div>
                       <div className={`banner-content ${banner.position}`}>
-                        <span className="collection">{banner.collection}</span>
-                        <h3 className="title">{banner.title}</h3>
+                        <span className="collection" style={{color:"#75b143"}}>{banner.collection}</span>
+                        <h3 className="title" style={{color:"#75b143"}}>{banner.title}</h3>
                         {/* <div className="button-wrap">
                           <a className={banner.btnClass} href={banner.link}>
                             Explore
