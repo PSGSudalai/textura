@@ -5,7 +5,7 @@ export const products = [
     name: "Bamboo Bath Towel",
     brand: "Yamboo",
     price: 29.99,
-    image: "/assets/images/product/1.jpg",
+    image: "/assets/images/product/bath_towel.jpeg",
     description:
       "Crafted from premium bamboo fiber, these bath towels offer an ultra-soft, luxurious feel with superior absorbency. Naturally hypoallergenic and antimicrobial, ideal for sensitive skin.",
     attributes: {
