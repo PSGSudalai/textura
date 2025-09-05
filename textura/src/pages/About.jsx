@@ -14,7 +14,7 @@ const About = () => {
       title: "Launch of Yamboo",
       description:
         "Introduced our in-house sustainable brand Yamboo, starting with a premium range of towels, tissues, and pillow covers.",
-      image: "assets/img/img7.jpg",
+      image: "assets/img/img5.jpg",
     },
     {
       year: "2026 & Beyond",

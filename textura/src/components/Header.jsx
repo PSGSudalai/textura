@@ -1,10 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <>
-      {/* Header Area  */}
+      {/* Internal Styles for Mobile Nav */}
+      <style>{`
+  .mobile-nav {
+    display: none !important;  /* force hidden by default */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background: #000000ff;
+    z-index: 9999;
+    overflow-y: auto;
+    padding: 20px;
+  }
+
+  .mobile-nav.open {
+    display: block !important; /* force visible when open */
+  }
+
+  .mobile-nav .close-nav {
+    position: absolute;
+    top: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+  }
+`}</style>
+
+
+      {/* Header Area */}
       <div id="header-1" className="header-area absolute-header">
         <div id="header-sticky">
           <div className="navigation">
@@ -16,31 +50,31 @@ const Header = () => {
                   </Link>
                 </div>
 
-                {/* Main Menu  */}
+                {/* Main Menu */}
                 <div className="main-menu d-none d-lg-block">
                   <ul>
                     <li>
-                      <Link className="navlink" to="/">
-                        Home
-                      </Link>
+                      <Link className="navlink" to="/">Home</Link>
                     </li>
                     <li>
-                      <a href="" className="has-arrow navlink">Services</a>
+                      <a href="#" className="has-arrow navlink">Brands</a>
                       <ul className="sub-menu">
                         <li>
-                          <a href="https://yamboo.com" target="_blank" rel="noopener noreferrer"> Yamboo </a>
+                          <a
+                            href="https://yamboo.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Yamboo
+                          </a>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <Link className="navlink" to="/about">
-                        About Us
-                      </Link>
+                      <Link className="navlink" to="/about">About Us</Link>
                     </li>
                     <li>
-                      <Link className="navlink" to="/contact">
-                        Contact
-                      </Link>
+                      <Link className="navlink" to="/contact">Contact</Link>
                     </li>
                   </ul>
                 </div>
@@ -48,59 +82,53 @@ const Header = () => {
                 {/* Mobile Menu */}
                 <div className="mobile-nav-bar d-block col-sm-1 col-6 d-lg-none">
                   <div className="mobile-nav-wrap">
-                    <div id="hamburger">
+                    {/* Hamburger */}
+                    <div id="hamburger" onClick={toggleMenu}>
                       <i className="las la-bars" />
                     </div>
 
-                    {/* mobile menu - responsive menu  */}
-                    <div className="mobile-nav">
-                      <button type="button" className="close-nav">
+                    {/* Mobile Nav */}
+                    <div className={`mobile-nav ${isMenuOpen ? "open" : ""}`}>
+                      <button type="button" className="close-nav" onClick={closeMenu}>
                         <i className="las la-times-circle" />
                       </button>
                       <nav className="sidebar-nav">
                         <ul className="metismenu" id="mobile-menu">
                           <li>
-                            <Link className="has-arrow" to="/">
-                              Homes
-                            </Link>
+                            <Link to="/" onClick={closeMenu}>Home</Link>
                           </li>
                           <li>
-                            <Link className="has-arrow" to="/services">
-                              Services
-                            </Link>
+                            <Link to="#" onClick={closeMenu}>Brands</Link>
                             <ul className="sub-menu">
                               <li>
-                                <Link to="/services">Services</Link>
+                                <Link to="" onClick={closeMenu}>Yamboo</Link>
                               </li>
                             </ul>
                           </li>
                           <li>
-                            <Link className="has-arrow" to="/about">
-                              About Us
-                            </Link>
+                            <Link to="/about" onClick={closeMenu}>About Us</Link>
                           </li>
-                          <li>
-                            <Link to="/contact">Contact</Link>
-                          </li>
+                          {/* <li>
+                            <Link to="/contact" onClick={closeMenu}>Contact</Link>
+                          </li> */}
                         </ul>
                       </nav>
 
                       <div className="action-bar">
-                        <a href="mailto:info@roofix.com">
-                          <i className="las la-envelope" />
-                          info@Textura.com
+                        <a href="mailto:prabakar@texturaexports.com">
+                          <i className="las la-envelope" /> prabakar@texturaexports.com
                         </a>
-                        <a href="tel:123-456-7890">
-                          <i className="fal fa-phone" />
-                          123-456-7890
+                        <a href="tel:+91 97406 43497">
+                          <i className="fal fa-phone" /> +91 97406 43497
                         </a>
-                        <Link to="/contact" className="theme-btn">
+                        <Link to="/contact" className="theme-btn" onClick={closeMenu}>
                           Contact Us
                         </Link>
                       </div>
                     </div>
                   </div>
                 </div>
+                {/* End Mobile Menu */}
               </div>
             </div>
           </div>

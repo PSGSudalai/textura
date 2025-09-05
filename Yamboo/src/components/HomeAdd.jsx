@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HomeAdd = () => {
   // Banner data
   const bannerData = {
-    bgImage: "/assets/images/banner/4-1-1170x400.jpg",
+    bgImage: "/assets/images/yamboo/homeAdd.png",
     offer: "Only Today",
     title: "Luxury Bamboo Towels",
     discountText: "Up To",
