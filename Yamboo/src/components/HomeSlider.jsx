@@ -10,17 +10,17 @@ const HomeSlider = () => {
   const slides = [
     {
       bg: "/assets/images/slider/bg/2-1.jpg",
-      img: "/assets/images/slider/slide-img/2-1-960x741.jpg",
+      img: "/assets/images/yamboo/Hero4.png",
       count: "01",
     },
     {
       bg: "/assets/images/slider/bg/2-1.jpg",
-      img: "/assets/images/slider/slide-img/2-2-960x741.jpg",
+      img: "/assets/images/yamboo/Hero5.png",
       count: "02",
     },
     {
       bg: "/assets/images/slider/bg/2-1.jpg",
-      img: "/assets/images/slider/slide-img/2-3-960x741.jpg",
+      img: "/assets/images/yamboo/Hero2.png",
       count: "03",
     },
   ];
@@ -46,9 +46,9 @@ const HomeSlider = () => {
               className="slide-inner style-2"
               style={{ backgroundImage: `url(${slide.bg})` }}
             >
-              <div className="slide-content text-black">
+              <div className="slide-content text-black" style={{padding:"10px"}}>
                 <h2 className="title">
-                  Sustainable <br />
+                  Eco Friendly <br />
                   Textiles
                 </h2>
                 <p className="short-desc">

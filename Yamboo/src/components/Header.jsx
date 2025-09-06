@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { FiMenu, FiX } from "react-icons/fi";
+import { HashLink } from "react-router-hash-link";
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -60,10 +61,14 @@ const Header = () => {
                           <Link to="/shop">Products</Link>
                         </li> */}
                         <li>
-                          <Link to="/about">About Us</Link>
+                          <HashLink smooth to="/about#about-area">
+                            About Us
+                          </HashLink>
                         </li>
                         <li>
-                          <Link to="/about#contact-form-section">Contact Us</Link>
+                          <HashLink smooth to="/about#contact-form-section">
+                            Contact Us
+                          </HashLink>
                         </li>
                       </ul>
                     </nav>
@@ -101,7 +106,7 @@ const Header = () => {
                   onClick={closeMobileMenu}
                   className="button-close"
                   aria-label="Close mobile menu"
-                  style={{color:"black"}}
+                  style={{ color: "black" }}
                 >
                   {/* <i className="pe-7s-close">X</i> */}
                   <FiX size={28} />
@@ -120,11 +125,12 @@ const Header = () => {
                     {/* <li>
                       <a href="/shop">Shop</a>
                     </li> */}
+
                     <li>
-                      <a href="/about">About Us</a>
+                      <a href="/about#about-area">About Us</a>
                     </li>
                     <li>
-                      <a href="/contact">Contact</a>
+                      <a href="/about#contact-form-section">Contact Us</a>
                     </li>
                   </ul>
                 </nav>

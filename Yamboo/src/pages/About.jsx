@@ -85,7 +85,7 @@ const About = () => {
         <Breadcrumb title={breadcrumbData.title} links={breadcrumbData.links} />
 
         {/* About Section */}
-        <div className="about-area section-space-top-95">
+        <div className="about-area section-space-top-95" id="about-area">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">

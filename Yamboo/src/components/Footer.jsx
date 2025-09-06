@@ -28,7 +28,7 @@ const Footer = () => {
                     <ul>
                       <li>
                         <a
-                          href="https://facebook.com/"
+                          href="https://www.facebook.com/Yamboo.urbano"
                           target="_blank"
                           rel="noreferrer"
                           data-tippy="Facebook"
@@ -38,22 +38,12 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="https://instagram.com/"
+                          href="https://www.instagram.com/yamboo/"
                           target="_blank"
                           rel="noreferrer"
                           data-tippy="Instagram"
                         >
                           <i className="fa fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://linkedin.com/"
-                          target="_blank"
-                          rel="noreferrer"
-                          data-tippy="LinkedIn"
-                        >
-                          <i className="fa fa-linkedin"></i>
                         </a>
                       </li>
                       <li>
@@ -80,13 +70,10 @@ const Footer = () => {
                       <a href="/">Home</a>
                     </li>
                     <li>
-                      <a href="/about">About Us</a>
+                      <a href="/about#about-area">About Us</a>
                     </li>
-                    {/* <li>
-                      <a href="/products">Products</a>
-                    </li> */}
                     <li>
-                      <a href="/about">Contact Us</a>
+                      <a href="/about#contact-form-section">Contact Us</a>
                     </li>
                   </ul>
                 </div>
