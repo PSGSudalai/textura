@@ -4,7 +4,7 @@ export const products = [
     id: 1,
     name: "Bamboo Bath Towel",
     brand: "Yamboo",
-    price: 29.99,
+    // price: 29.99,
     image: "/assets/images/yamboo/1.jpg",
     description:
       "Crafted from premium bamboo fiber, these bath towels offer an ultra-soft, luxurious feel with superior absorbency. Naturally hypoallergenic and antimicrobial, ideal for sensitive skin.",
@@ -29,7 +29,7 @@ export const products = [
     id: 2,
     name: "Bamboo Face Towel",
     brand: "Yamboo",
-    price: 12.99,
+    // price: 12.99,
     image: "/assets/images/yamboo/2.jpg",
     description:
       "Soft on the skin and gentle enough for daily use, these bamboo face towels are highly absorbent and naturally antibacterial, making them perfect for skincare routines.",
@@ -53,7 +53,7 @@ export const products = [
     id: 3,
     name: "Bamboo Baby Towel",
     brand: "Yamboo",
-    price: 19.99,
+    // price: 19.99,
     image: "/assets/images/yamboo/3.jpg",
     description:
       "Wrap your baby in the ultimate comfort with these super-soft bamboo baby towels. Naturally antibacterial and ultra-gentle, perfect for delicate newborn skin.",
@@ -78,7 +78,7 @@ export const products = [
     id: 4,
     name: "Bamboo Pillow Cover",
     brand: "Yamboo",
-    price: 15.99,
+    // price: 15.99,
     image: "/assets/images/yamboo/4.jpg",
     description:
       "Bamboo pillow covers offer a silky-smooth feel while enhancing sleep quality with temperature regulation and hypoallergenic properties.",
@@ -103,7 +103,7 @@ export const products = [
     id: 5,
     name: "Bamboo Tissue Paper (Reusable)",
     brand: "Yamboo",
-    price: 9.99,
+    // price: 9.99,
     image: "/assets/images/yamboo/5.jpg",
     description:
       "Eco-friendly and reusable bamboo tissue papers are a sustainable alternative to traditional tissues. Soft, absorbent, and washable.",

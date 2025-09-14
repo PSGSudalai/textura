@@ -5,7 +5,7 @@ const AnimatedCounter = ({ end, duration = 1000 }) => {
 
   useEffect(() => {
     let start = 0;
-    const increment = end / (duration / 16); // ~60fps
+    const increment = end / (duration / 16);
     const timer = setInterval(() => {
       start += increment;
       if (start >= end) {
@@ -26,38 +26,38 @@ const Counter = () => {
   return (
     <div className="counter-section section-padding pb-0">
       <div className="container">
-        <div className="row gx-5">
-          <div className="col-lg-3 col-md-3 col-sm-6">
-            <div className="single-counter-box highlights">
+        <div className="row gx-5 gy-4">
+          <div className="col-lg-3 col-md-3 col-sm-6 col-6">
+            <div className="single-counter-box highlights text-center">
               <p className="counter-number">
-                <AnimatedCounter end={1995} duration={1000} />
+                <AnimatedCounter end={2025} duration={1000} />
               </p>
               <h6>Since</h6>
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-3 col-sm-6">
-            <div className="single-counter-box">
+          <div className="col-lg-3 col-md-3 col-sm-6 col-6">
+            <div className="single-counter-box text-center">
               <p className="counter-number">
-                <AnimatedCounter end={16} duration={1000} />
+                <AnimatedCounter end={3} duration={1000} />
               </p>
               <h6>Offices</h6>
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-3 col-sm-6">
-            <div className="single-counter-box">
+          <div className="col-lg-3 col-md-3 col-sm-6 col-6">
+            <div className="single-counter-box text-center">
               <p className="counter-number">
-                <AnimatedCounter end={215} duration={1000} />
+                <AnimatedCounter end={28} duration={1000} />
               </p>
               <h6>Projects</h6>
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-3 col-sm-6">
-            <div className="single-counter-box">
+          <div className="col-lg-3 col-md-3 col-sm-6 col-6">
+            <div className="single-counter-box text-center">
               <p className="counter-number">
-                <AnimatedCounter end={47} duration={1000} />
+                <AnimatedCounter end={6} duration={1000} />
               </p>
               <h6>Countries</h6>
             </div>

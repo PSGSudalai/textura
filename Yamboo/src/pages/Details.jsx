@@ -34,9 +34,9 @@ const Details = () => {
             <div className="col-lg-6 pt-5 pt-lg-0">
               <div className="single-product-content">
                 <h2 className="title">{product.name}</h2>
-                <div className="price-box">
+                {/* <div className="price-box">
                   <span className="new-price">${product.price.toFixed(2)}</span>
-                </div>
+                </div> */}
                 <p className="short-desc">{product.description}</p>
 
                 <h4>Product Details</h4>

@@ -4,9 +4,9 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 // import img1 from "../img/img1.jpg";
 // import img2 from "../img/img6.jpg";
 // import img3 from "../img/img2.jpg";
-import img1 from "../img/product/1.jpg";
-import img2 from "../img/product/2.jpg";
-import img3 from "../img/product/3.jpg";
+import img1 from "../img/product/1.png";
+import img3 from "../img/product/3.png";
+import img2 from "../img/product/2.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -32,7 +32,7 @@ const Service = () => {
       <div className="container">
         {/* Section Heading */}
         <div className="row align-items-center">
-          <div className="col-xl-5 col-lg-6 col-md-7">
+          <div className="col-xl-8 col-lg-6 col-md-7">
             <div className="section-title">
               <h2 className="visible-slowly-right">
                 {serviceData.sectionTitle}
@@ -40,7 +40,7 @@ const Service = () => {
               <p className="pt-20">{serviceData.sectionDescription}</p>
             </div>
           </div>
-          <div className="col-xl-7 col-lg-6 col-md-5 text-md-end">
+          <div className="col-xl-4 col-lg-6 col-md-5 text-md-end">
             <a href={serviceData.buttonLink} className="bordered-btn">
               {serviceData.buttonText} <i className="fa-light fa-arrow-right" />
             </a>
@@ -62,7 +62,7 @@ const Service = () => {
           >
             {serviceData.projects.map((project) => (
               <SwiperSlide key={project.id}>
-                <div className="single-project-item" style={{ maxWidth: 432 }}>
+                <div className="single-project-item" style={{ maxWidth: 500 }}>
                   <div className="project-bg">
                     <img
                       src={project.img}

@@ -11,17 +11,23 @@ const HomeSlider = () => {
     {
       bg: "/assets/images/slider/bg/2-1.jpg",
       img: "/assets/images/yamboo/Hero4.png",
-      count: "01",
+      count: "1",
+      title: "SUSTAINABLE BAMBOO <br /> SOLUTIONS",
+      desc: "Crafted With Precision, Designed To Serve Homes And Businesses Worldwide.",
     },
     {
       bg: "/assets/images/slider/bg/2-1.jpg",
       img: "/assets/images/yamboo/Hero5.png",
-      count: "02",
+      count: "2",
+      title: "ECO FRIENDLY <br /> TEXTILES",
+      desc: "From Bamboo Fabrics To Everyday Essentials – Comfort Meets Sustainability.",
     },
     {
       bg: "/assets/images/slider/bg/2-1.jpg",
       img: "/assets/images/yamboo/Hero2.png",
-      count: "03",
+      count: "3",
+      title: "GLOBAL BAMBOO <br /> INNOVATION",
+      desc: "Delivering Durable, Stylish, And Eco-Friendly Bamboo Products Across Continents.",
     },
   ];
 
@@ -34,7 +40,7 @@ const HomeSlider = () => {
           prevEl: ".slide-button-prev",
         }}
         autoplay={{
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         loop={true}
@@ -46,31 +52,51 @@ const HomeSlider = () => {
               className="slide-inner style-2"
               style={{ backgroundImage: `url(${slide.bg})` }}
             >
-              <div className="slide-content text-black" style={{padding:"10px"}}>
-                <h2 className="title">
-                  Eco Friendly <br />
-                  Textiles
-                </h2>
-                <p className="short-desc">
-                  Crafted with care from eco-friendly bamboo for lasting
-                  comfort.
+              <div
+                className="slide-content text-black"
+                style={{
+                  padding: "20px",
+                  maxWidth: "700px",
+                }}
+              >
+                <h2
+                  className="title"
+                  style={{
+                    fontSize: "42px",
+                    lineHeight: "1.3",
+                    fontWeight: "700",
+                    marginBottom: "15px",
+                  }}
+                  dangerouslySetInnerHTML={{ __html: slide.title }}
+                />
+                <p
+                  className="short-desc"
+                  style={{
+                    fontSize: "18px",
+                    lineHeight: "1.6",
+                    color: "#444",
+                    marginBottom: "25px",
+                  }}
+                >
+                  {slide.desc}
                 </p>
 
                 <div className="btn-wrap">
-                  {/* <Link
-                  className="btn btn-custom-size xl-size btn-Yamboo-primary"
-                  to="/shop"
-                >
-                  Discover Now
-                </Link> */}
+                  <a
+                    href="#products"
+                    className="btn btn-custom-size xl-size btn-Yamboo-primary"
+                  >
+                    Discover Now
+                  </a>
                 </div>
               </div>
+
               <div className="slide-img">
-                <img src={slide.img} alt="Slide" />
+                <img src={slide.img} alt={slide.title} />
                 <div className="slide-count">
                   <span className="data-count" data-count={slide.count}>
                     <span className="forward-slash">/</span>
-                    <span>03</span>
+                    <span>{slides.length}</span>
                   </span>
                 </div>
               </div>
@@ -87,6 +113,30 @@ const HomeSlider = () => {
           </div>
         </div>
       </Swiper>
+
+      {/* Responsive styles for smaller devices */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .slide-content .title {
+              font-size: 28px !important;
+              line-height: 1.3;
+            }
+            .slide-content .short-desc {
+              font-size: 16px !important;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .slide-content .title {
+              font-size: 22px !important;
+            }
+            .slide-content .short-desc {
+              font-size: 14px !important;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };

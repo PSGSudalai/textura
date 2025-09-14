@@ -11,21 +11,21 @@ const Team = () => {
     members: [
       {
         id: 1,
-        name: "Anna Taylor",
+        name: "Abdul Kabeez",
         role: "Team Manager",
-        img: "/assets/img/team/2-1.jpg",
+        img: "/assets/img/team1.png",
       },
       {
         id: 2,
-        name: "John Smith",
-        role: "Lead Designer",
-        img: "/assets/img/team/2-2.jpg",
+        name: "Preethi",
+        role: "Sales Manager",
+        img: "/assets/img/team2.png",
       },
       {
         id: 3,
-        name: "Sophia Brown",
-        role: "Developer",
-        img: "/assets/img/team/2-3.jpg",
+        name: "Deepak Kumar",
+        role: "Operations Head",
+        img: "/assets/img/team3.png",
       },
     ],
   };
@@ -34,12 +34,11 @@ const Team = () => {
     <div
       id="team-2"
       className="team-section section-padding"
-      style={{ backgroundImage: `url(${teamData.sectionBg})` }} // ✅ react-friendly bg
+      style={{ backgroundImage: `url(${teamData.sectionBg})` }}
     >
       <div className="container">
         <div className="row align-items-center">
-          {/* Left Section (Intro) */}
-          <div className="col-xl-4 col-lg-5 col-md-6">
+          <div className="col-xl-4 col-lg-5 col-md-12">
             <div className="team-intro-wrap">
               <div className="section-title">
                 <h6 className="text-white">{teamData.sectionTitle}</h6>
@@ -51,18 +50,30 @@ const Team = () => {
             </div>
           </div>
 
-          {/* Right Section (Team Members) */}
-          <div className="col-xl-8 col-lg-7 col-md-6">
-            <div className="row team-content-wrap">
+          <div className="col-xl-8 col-lg-7 col-md-12">
+            <div
+              className="team-content-wrap"
+              style={{
+                display: "flex",
+                gap: "20px",
+                overflowX: "auto",
+                flexWrap: "nowrap",
+              }}
+            >
               {teamData.members.map((member) => (
-                <div key={member.id} className="col-xl-4 col-lg-4 col-md-6">
-                  <div className="single-team-wrap">
-                    <div className="team-img">
-                      <img src={member.img} alt={member.name} />
-                      <div className="team-info">
-                        <h6>{member.name}</h6>
-                        <p>{member.role}</p>
-                      </div>
+                <div
+                  key={member.id}
+                  className="single-team-wrap"
+                  style={{
+                    flex: "0 0 auto",
+                    width: "200px",
+                  }}
+                >
+                  <div className="team-img">
+                    <img src={member.img} alt={member.name} style={{ width: "100%" }} />
+                    <div className="team-info">
+                      <h6>{member.name}</h6>
+                      <p>{member.role}</p>
                     </div>
                   </div>
                 </div>

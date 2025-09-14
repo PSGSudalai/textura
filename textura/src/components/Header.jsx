@@ -37,7 +37,6 @@ const Header = () => {
   }
 `}</style>
 
-
       {/* Header Area */}
       <div id="header-1" className="header-area absolute-header">
         <div id="header-sticky">
@@ -54,14 +53,18 @@ const Header = () => {
                 <div className="main-menu d-none d-lg-block">
                   <ul>
                     <li>
-                      <Link className="navlink" to="/">Home</Link>
+                      <Link className="navlink" to="/">
+                        Home
+                      </Link>
                     </li>
                     <li>
-                      <a href="#" className="has-arrow navlink">Brands</a>
+                      <a href="#" className="has-arrow navlink">
+                        Brands
+                      </a>
                       <ul className="sub-menu">
                         <li>
                           <a
-                            href="https://yamboo.com"
+                            href="https://yam-phi.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -71,10 +74,14 @@ const Header = () => {
                       </ul>
                     </li>
                     <li>
-                      <Link className="navlink" to="/about">About Us</Link>
+                      <Link className="navlink" to="/about">
+                        About Us
+                      </Link>
                     </li>
                     <li>
-                      <Link className="navlink" to="/contact">Contact</Link>
+                      <Link className="navlink" to="/contact">
+                        Contact
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -89,39 +96,65 @@ const Header = () => {
 
                     {/* Mobile Nav */}
                     <div className={`mobile-nav ${isMenuOpen ? "open" : ""}`}>
-                      <button type="button" className="close-nav" onClick={closeMenu}>
+                      <button
+                        type="button"
+                        className="close-nav"
+                        onClick={closeMenu}
+                      >
                         <i className="las la-times-circle" />
                       </button>
                       <nav className="sidebar-nav">
                         <ul className="metismenu" id="mobile-menu">
                           <li>
-                            <Link to="/" onClick={closeMenu}>Home</Link>
+                            <Link to="/" onClick={closeMenu}>
+                              Home
+                            </Link>
                           </li>
                           <li>
-                            <Link to="#" onClick={closeMenu}>Brands</Link>
+                            <Link to="#" onClick={closeMenu}>
+                              Brands
+                            </Link>
                             <ul className="sub-menu">
                               <li>
-                                <Link to="" onClick={closeMenu}>Yamboo</Link>
+                                <a
+                                  href="https://yam-phi.vercel.app/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={closeMenu}
+                                >
+                                  Yamboo
+                                </a>
                               </li>
                             </ul>
                           </li>
+
                           <li>
-                            <Link to="/about" onClick={closeMenu}>About Us</Link>
+                            <Link to="/about" onClick={closeMenu}>
+                              About Us
+                            </Link>
                           </li>
-                          {/* <li>
-                            <Link to="/contact" onClick={closeMenu}>Contact</Link>
-                          </li> */}
+                          
+                          <li>
+                            <Link to="/contact" onClick={closeMenu}>
+                              Contact
+                            </Link>
+                          </li>
                         </ul>
                       </nav>
 
                       <div className="action-bar">
                         <a href="mailto:prabakar@texturaexports.com">
-                          <i className="las la-envelope" /> prabakar@texturaexports.com
+                          <i className="las la-envelope" />{" "}
+                          prabakar@texturaexports.com
                         </a>
                         <a href="tel:+91 97406 43497">
                           <i className="fal fa-phone" /> +91 97406 43497
                         </a>
-                        <Link to="/contact" className="theme-btn" onClick={closeMenu}>
+                        <Link
+                          to="/contact"
+                          className="theme-btn"
+                          onClick={closeMenu}
+                        >
                           Contact Us
                         </Link>
                       </div>

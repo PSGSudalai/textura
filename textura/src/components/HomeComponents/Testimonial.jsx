@@ -48,7 +48,7 @@ const Testimonial = () => {
       <div className="container">
         {/* Section Header */}
         <div className="row align-items-center">
-          <div className="col-xl-10 col-lg-10 col-md-10">
+          <div className="col-xl-12 col-lg-12 col-md-12">
             <div className="section-title">
               <h2 className="visible-slowly-right">
                 {testimonialData.sectionTitle}

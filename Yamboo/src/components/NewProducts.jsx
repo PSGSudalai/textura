@@ -59,11 +59,11 @@ const NewProducts = () => {
                     >
                       {product.name}
                     </Link>
-                    <div className="price-box pb-1">
+                    {/* <div className="price-box pb-1">
                       <span className="new-price">
                         ${product.price.toFixed(2)}
                       </span>
-                    </div>
+                    </div> */}
                   </div>
                 </SwiperSlide>
               ))}

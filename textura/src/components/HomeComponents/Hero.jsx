@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 import home2 from "../img/home1.jpg";
-import home1 from "../img/img9.jpg";
+import home1 from "../img/home2.png";
 import home3 from "../img/home3.jpg";
 
 const Hero = () => {
@@ -18,11 +18,11 @@ const Hero = () => {
       subtitle: "Premium Bamboo Textiles",
       title: (
         <>
-          <span>Experience</span> Comfort <br /> With Sustainable Luxury
+          <span>Eco-Friendly</span> Bamboo Towels <br /> & Pillow Covers
         </>
       ),
       description:
-        "Discover our eco-friendly bamboo towels, hand towels, and pillow covers—designed for softness, durability, and a greener lifestyle.",
+        "Soft, durable, and sustainable—crafted to bring comfort while supporting a greener lifestyle.",
       buttonText: "Explore Products",
       buttonLink: "#products",
     },
@@ -33,11 +33,11 @@ const Hero = () => {
       subtitle: "Eco-Friendly Innovation",
       title: (
         <>
-          <span>Luxury</span> That Cares <br /> For You & The Planet
+          Skin-Friendly & <span>Hypoallergenic</span> <br /> Bamboo Products
         </>
       ),
       description:
-        "Our Yamboo products combine natural antibacterial properties with premium quality, offering skin-friendly, hypoallergenic, and sustainable solutions.",
+        "Combining natural antibacterial properties with premium quality to care for you and the planet.",
       buttonText: "View Collection",
       buttonLink: "#collection",
     },
@@ -48,12 +48,11 @@ const Hero = () => {
       subtitle: "Trusted Worldwide",
       title: (
         <>
-          Bringing <span>Sustainable Textiles</span> <br /> To Homes &
-          Businesses Globally
+          <span>Sustainable Textiles</span> <br /> For Homes & Businesses
         </>
       ),
       description:
-        "From hotels to eco-conscious retailers, we deliver bamboo textiles that meet international standards of quality, safety, and sustainability.",
+        "Meeting global standards of quality and sustainability—trusted by eco-conscious buyers worldwide.",
       buttonText: "Get In Touch",
       buttonLink: "/contact",
     },
@@ -79,7 +78,7 @@ const Hero = () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 width: "100%",
-                height: "100vh", // Full screen height
+                height: "100vh",
                 position: "relative",
               }}
             >
@@ -95,10 +94,10 @@ const Hero = () => {
                       data-wow-delay=".2s"
                     >
                       <div className="section-title">
-                        <h6 className="text-white">{slide.subtitle}</h6>
-                        <h1 className="text-white">{slide.title}</h1>
+                        <h5 className="text-white">{slide.subtitle}</h5>
+                        <h2 className="text-white">{slide.title}</h2>
                       </div>
-                      <p className="text-white">{slide.description}</p>
+                      <h5 className="text-white">{slide.description}</h5>
                       <a href={slide.buttonLink} className="white-btn mt-40">
                         {slide.buttonText}{" "}
                         <i className="fa-light fa-arrow-right" />

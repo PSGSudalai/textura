@@ -26,7 +26,7 @@ const Footer = () => {
                   </p>
                   <div className="social-link with-border">
                     <ul>
-                      <li>
+                      {/* <li>
                         <a
                           href="https://www.facebook.com/Yamboo.urbano"
                           target="_blank"
@@ -35,10 +35,10 @@ const Footer = () => {
                         >
                           <i className="fa fa-facebook"></i>
                         </a>
-                      </li>
+                      </li> */}
                       <li>
                         <a
-                          href="https://www.instagram.com/yamboo/"
+                          href="https://www.instagram.com/texturaexports/"
                           target="_blank"
                           rel="noreferrer"
                           data-tippy="Instagram"

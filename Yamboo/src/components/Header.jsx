@@ -19,7 +19,7 @@ const Header = () => {
               <div className="col-6">
                 <div className="header-top-left">
                   <span className="Yamboo-offer">
-                    HELLO EVERYONE! 25% Off All Products
+                    HELLO EVERYONE!
                   </span>
                 </div>
               </div>
@@ -48,7 +48,7 @@ const Header = () => {
                     className="header-logo"
                     style={{ maxWidth: "100px" }}
                   >
-                    <img src="/assets/images/logo/dark.png" alt="Header Logo" />
+                    <img src="/assets/images/logo/dark.png" alt="Header Logo" style={{maxWidth:"150px"}}/>
                   </a>
 
                   <div className="d-none d-lg-block">

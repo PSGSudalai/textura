@@ -7,7 +7,7 @@ const About = () => {
       title: "Foundation of Textura Exports",
       description:
         "Founded in Bangalore, India, with a clear vision: to create a textile export business that is environmentally responsible and globally competitive.",
-      image: "assets/img/img4.jpg",
+      image: "assets/img/img4.png ",
     },
     {
       year: "2025",
@@ -34,37 +34,58 @@ const About = () => {
     members: [
       {
         id: 1,
-        name: "Benjamin Scott",
-        role: "CTO",
-        image: "assets/img/team/1.jpg",
+        name: "Abdul Kabeez",
+        role: "Team Manager",
+        image: "assets/img/team1.png",
         delay: "200ms",
       },
       {
         id: 2,
-        name: "Anna Hallberg",
-        role: "Director",
-        image: "assets/img/team/2.jpg",
+        name: "Preethi",
+        role: "Sales Manager",
+        image: "assets/img/team2.png",
         delay: "400ms",
       },
       {
         id: 3,
-        name: "Deniel Lee",
-        role: "Manager",
-        image: "assets/img/team/3.jpg",
+        name: "Deepak Kumar",
+        role: "Operations Head",
+        image: "assets/img/team3.png",
         delay: "600ms",
       },
       {
         id: 4,
-        name: "Sophia Ramirez",
-        role: "Engineer",
-        image: "assets/img/team/4.jpg",
+        name: "Ritika Sharma",
+        role: "HR & Communications",
+        image: "assets/img/team4.png",
         delay: "800ms",
       },
     ],
   };
-``
+
   return (
     <>
+      {/* Internal Styles (Scoped to Team Section) */}
+      <style>{`
+        .team-section .team-img img {
+          object-fit: cover;
+          width: 100%;
+          height: 250px; /* Default height for large screens */
+        }
+
+        @media (max-width: 992px) {
+          .team-section .team-img img {
+            height: 300px;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .team-section .team-img img {
+            height: 200px;
+          }
+        }
+      `}</style>
+
       {/* Breadcrumb */}
       <div className="breadcrumb-area about">
         <div className="overlay-5" />
@@ -93,13 +114,13 @@ const About = () => {
                   company specializing in 100% bamboo textiles. We are dedicated
                   to bridging the gap between India’s sustainable manufacturing
                   capabilities and the growing demand for eco-friendly textile
-                  solutions worldwide. Our expertise lies in sourcing,
-                  designing, and exporting high-quality bamboo-based products
-                  such as bath towels, hand towels, baby towels, tissue papers,
-                  and pillow covers under our premium brand Yamboo. Each product
-                  is carefully crafted to meet international quality standards,
-                  ensuring softness, durability, and sustainability. At Textura
-                  Exports, we believe in responsible trade—supporting
+                  solutions worldwide.  <br />
+                  Our expertise lies in sourcing, designing, and exporting high-quality 
+                  bamboo-based products such as bath towels, hand towels, baby towels, 
+                  tissue papers, and pillow covers under our premium brand Yamboo. 
+                  Each product is carefully crafted to meet international quality 
+                  standards,ensuring softness, durability, and sustainability.  <br />
+                  At Textura Exports, we believe in responsible trade-supporting
                   eco-conscious buyers such as hotels, retailers, lifestyle
                   brands, and hospitality groups who are making a shift toward
                   greener alternatives.
@@ -165,11 +186,11 @@ const About = () => {
         </div>
       </div>
 
-      {/* Team Section (JSON-driven) */}
+      {/* Team Section */}
       <div className="team-section section-padding pt-0">
         <div className="container">
           <div className="row">
-            <div className="col-xl-6 col-lg-6 col-md-7">
+            <div className="col-xl-8 col-lg-6 col-md-7">
               <div className="section-title">
                 <h2 className="visible-slowly-right">
                   {teamData.sectionTitle}
@@ -177,27 +198,33 @@ const About = () => {
               </div>
               <p>{teamData.sectionDescription}</p>
             </div>
-            <div className="col-xl-6 col-lg-6 col-md-5 text-md-end">
+            <div className="col-xl-4 col-lg-6 col-md-5 text-md-end">
               <a href={teamData.buttonLink} className="bordered-btn">
                 {teamData.buttonText} <i className="fa-light fa-arrow-right" />
               </a>
             </div>
           </div>
 
-          <div className="row mt-30">
+          <div className="row mt-30 gy-4">
             {teamData.members.map((member) => (
               <div
                 key={member.id}
-                className="col-xl-3 col-lg-3 col-md-6 wow fadeInUp animated"
+                className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 wow fadeInUp animated"
                 data-wow-delay={member.delay}
               >
-                <div className="single-team-item">
-                  <div className="team-img">
-                    <img src={member.image} alt={member.name} />
+                <div className="single-team-item text-center h-100 p-3 rounded shadow-sm">
+                  <div className="team-img mb-3">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="img-fluid rounded"
+                    />
                   </div>
                   <div className="team-info">
-                    <span>{member.role}</span>
-                    <h5>{member.name}</h5>
+                    <span className="d-block mb-1 text-muted">
+                      {member.role}
+                    </span>
+                    <h5 className="fw-bold">{member.name}</h5>
                   </div>
                 </div>
               </div>

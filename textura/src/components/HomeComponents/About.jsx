@@ -8,16 +8,16 @@ const About = () => {
       "At Textura, we blend India’s rich textile heritage with modern, eco-conscious innovation. With over a decade of expertise, we continue to set benchmarks in quality and sustainability for households and businesses worldwide.",
     buttonText: "About Us",
     buttonLink: "/about",
-    image: "/assets/img/img4.jpg",
+    image: "/assets/img/img4.png",
     accordion: [
       {
-        id: "aboutTwo",
+        id: "aboutOne",
         title: "Mission",
         text: "To deliver premium-quality bamboo textiles that redefine comfort, encourage sustainability, and bring eco-conscious living into every household and business across the globe.",
-        show: false,
+        show: true,
       },
       {
-        id: "aboutOne",
+        id: "aboutTwo",
         title: "Core Values",
         text: [
           {
@@ -36,7 +36,7 @@ const About = () => {
               "Serving diverse international markets with culturally adaptable textile solutions.",
           },
         ],
-        show: true,
+        show: false,
       },
       
       {
@@ -53,7 +53,7 @@ const About = () => {
       <div className="container">
         {/* Section Header */}
         <div className="row">
-          <div className="col-xl-5 col-lg-6 col-md-7">
+          <div className="col-xl-8 col-lg-6 col-md-7">
             <div className="section-title">
               <h2 className="visible-slowly-right">{aboutData.sectionTitle}</h2>
               <p className="pt-20 wow fadeInUp animated" data-wow-delay=".4s">
@@ -61,7 +61,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="col-xl-7 col-lg-6 col-md-5 text-md-end">
+          <div className="col-xl-4 col-lg-6 col-md-5 text-md-end align-items-center">
             <Link to={aboutData.buttonLink} className="bordered-btn">
               {aboutData.buttonText} <i className="fa-light fa-arrow-right" />
             </Link>

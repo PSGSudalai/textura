@@ -17,10 +17,10 @@ const HomeAdd = () => {
 
   // Counter data
   const counters = [
-    { num: 120, title: "Products Sold", time: 500 },
-    { num: 85, title: "Clients Worldwide", time: 1000 },
+    { num: 5, title: "Products", time: 500 },
+    { num: 4, title: "Countries Serving", time: 1000 },
     { num: 300, title: "Happy Customers", time: 1500 },
-    { num: 20, title: "Premium Collections", time: 2000 },
+    { num: "100%", title: "Quality Assurance", time: 2000 },
   ];
 
   return (

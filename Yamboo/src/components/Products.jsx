@@ -23,9 +23,9 @@ const Products = () => {
                   <Link className="product-name" to={`/product/${product.id}`}>
                     {product.name}
                   </Link>
-                  <div className="price-box pb-1">
+                  {/* <div className="price-box pb-1">
                     <span className="new-price">${product.price.toFixed(2)}</span>
-                  </div>
+                  </div> */}
                   {/* <div className="rating-box">
                     <ul>
                       {Array(5)
