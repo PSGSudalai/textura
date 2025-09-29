@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import emailjs from "emailjs-com"; // <-- import emailjs
 
 export const Contact = () => {
+  const [formMessage, setFormMessage] = useState({ type: "", text: "" });
+
   const contactData = {
     breadcrumb: {
       title: "Contact",
@@ -8,7 +12,7 @@ export const Contact = () => {
     },
     extraInfo: {
       introText:
-        "Welcome to Textura, a full-service textile exports company specializing in eco-friendly bamboo products.",
+        "Welcome to Textura Exports, a full-service textile exports company specializing in eco-friendly bamboo products.",
       image: "assets/img/home2.jpg",
       cta: {
         text: "Get In Touch",
@@ -19,7 +23,6 @@ export const Contact = () => {
         { platform: "facebook", icon: "lab la-facebook-f", url: "#" },
         { platform: "instagram", icon: "lab la-instagram", url: "#" },
         { platform: "linkedin", icon: "lab la-linkedin-in", url: "#" },
-        { platform: "skype", icon: "lab la-skype", url: "#" },
       ],
     },
     contactInfo: {
@@ -40,15 +43,26 @@ export const Contact = () => {
           type: "Address",
           value:
             "3101, Prestige Sunrise Park Birchwood, Electronic City Phase 1, Bangalore",
-          pincode:"560100, India",
+          pincode: "560100, India",
           delay: "600ms",
         },
       ],
       social: [
-        { platform: "facebook", icon: "fab fa-facebook-f", url: "#" },
-        { platform: "instagram", icon: "fab fa-instagram", url: "#" },
-        { platform: "linkedin", icon: "fab fa-linkedin-in", url: "#" },
-        { platform: "skype", icon: "fab fa-skype", url: "#" },
+        {
+          platform: "instagram",
+          icon: "fab fa-instagram",
+          url: "https://www.instagram.com/texturaexports/",
+        },
+        {
+          platform: "linkedin",
+          icon: "fab fa-linkedin-in",
+          url: "https://www.linkedin.com/in/textura-exports-a88135368/?originalSubdomain=in",
+        },
+        {
+          platform: "twitter",
+          icon: "fab fa-twitter",
+          url: "https://x.com/texturaexports",
+        },
       ],
     },
     form: {
@@ -64,6 +78,44 @@ export const Contact = () => {
         type: "submit",
       },
     },
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const name = e.target.elements["firstname"]?.value?.trim() || "";
+    const phone = e.target.elements["phone"]?.value?.trim() || "";
+
+    if (!name || !phone) {
+      setFormMessage({
+        type: "error",
+        text: "Please enter your Name and Phone number (both required).",
+      });
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        "service_mafgzvq",   // 🔹 Your EmailJS Service ID
+        "template_g07p279",  // 🔹 Your EmailJS Template ID (make sure it has company, firstname, lastname, email, phone, message variables)
+        e.target,
+        "RLN__pvlNyFcMngmP"  // 🔹 Your EmailJS Public Key
+      )
+      .then(
+        () => {
+          setFormMessage({
+            type: "success",
+            text: "Your message has been sent successfully!",
+          });
+          e.target.reset();
+        },
+        () => {
+          setFormMessage({
+            type: "error",
+            text: "Failed to send message. Please try again.",
+          });
+        }
+      );
   };
 
   return (
@@ -87,9 +139,12 @@ export const Contact = () => {
             <p>{contactData.extraInfo.introText}</p>
             <img src={contactData.extraInfo.image} alt="extra" />
             <div className="mt-30 mb-30">
-              <a href={contactData.extraInfo.cta.link} className={contactData.extraInfo.cta.className}>
+              <Link
+                to={contactData.extraInfo.cta.link}
+                className={contactData.extraInfo.cta.className}
+              >
                 {contactData.extraInfo.cta.text}
-              </a>
+              </Link>
             </div>
           </div>
           <div className="social-area-wrap">
@@ -144,8 +199,8 @@ export const Contact = () => {
                     data-wow-delay={detail.delay}
                   >
                     <p>{detail.type}</p>
-                    <h4 style={{margin:"0px"}}>{detail.value}</h4>
-                    <h4 style={{margin:"0px"}}>{detail.pincode}</h4>
+                    <h5 style={{ margin: "0px" }}>{detail.value}</h5>
+                    <h5 style={{ margin: "0px" }}>{detail.pincode}</h5>
                   </div>
                 ))}
                 <div className="social-area">
@@ -162,25 +217,72 @@ export const Contact = () => {
             <div className="offset-xl-1 col-xl-6 offset-lg-1 col-lg-6">
               <div className="subimit-form-wrap">
                 <div className="section-title">
-                  <h2 className="visible-slowly-right">{contactData.form.title}</h2>
+                  <h2 className="visible-slowly-right">
+                    {contactData.form.title}
+                  </h2>
                 </div>
-                <form action="#">
+
+                <form
+                  id="contact-form"
+                  className="contact-form"
+                  onSubmit={handleSubmit}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "16px",
+                  }}
+                >
+                  {/* hidden fields for EmailJS */}
+                  <input type="hidden" name="company" value="Textura" />
+                  <input type="hidden" name="lastname" value="" />
+
                   {contactData.form.fields.map((field, idx) =>
                     field.type === "textarea" ? (
                       <textarea
                         key={idx}
+                        name="message"
                         placeholder={field.placeholder}
                         rows={5}
+                        className="input-field"
                       />
                     ) : (
                       <input
                         key={idx}
+                        name={
+                          idx === 0
+                            ? "firstname" // full name goes into firstname
+                            : idx === 1
+                            ? "email"
+                            : idx === 2
+                            ? "phone"
+                            : `field_${idx}`
+                        }
                         type={field.type}
                         placeholder={field.placeholder}
+                        className="input-field"
+                        required={idx === 0 || idx === 2}
                       />
                     )
                   )}
-                  <input type={contactData.form.submitButton.type} value={contactData.form.submitButton.text} />
+
+                  <input
+                    type={contactData.form.submitButton.type}
+                    value={contactData.form.submitButton.text}
+                    className="btn btn-Yamboo-primary"
+                  />
+
+                  {formMessage.text && (
+                    <p
+                      className="form-message mt-3 mb-0"
+                      style={{
+                        color:
+                          formMessage.type === "error" ? "#c0392b" : "#1e8f3e",
+                        fontWeight: 600,
+                      }}
+                    >
+                      {formMessage.text}
+                    </p>
+                  )}
                 </form>
               </div>
             </div>

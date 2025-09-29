@@ -15,15 +15,15 @@ import "swiper/css/pagination";
 
 const Service = () => {
   const serviceData = {
-    sectionTitle: "Yamboo Products, Happy Customers",
+    sectionTitle: "Our Products, Happy Customers",
     sectionDescription:
       "From boutique hotels to retail stores, our premium bamboo textiles have delighted eco-conscious clients worldwide. Here are some of our recent products loved by our customers.",
     buttonText: "View All Projects",
     buttonLink: "#",
     projects: [
-      { id: 1, img: img1, title: " Bamboo Paper Towels" },
-      { id: 2, img: img2, title: "Luxury Bamboo Bath Towels" },
-      { id: 3, img: img3, title: "Eco-Friendly Bamboo Covers" },
+      { id: 1, img: img1, title: " Bamboo Bath Towels" },
+      { id: 2, img: img2, title: "Eco-Friendly Bamboo Covers" },
+      { id: 3, img: img3, title: " Bamboo Paper Towels" },
     ],
   };
 
@@ -40,11 +40,11 @@ const Service = () => {
               <p className="pt-20">{serviceData.sectionDescription}</p>
             </div>
           </div>
-          <div className="col-xl-4 col-lg-6 col-md-5 text-md-end">
+          {/* <div className="col-xl-4 col-lg-6 col-md-5 text-md-end">
             <a href={serviceData.buttonLink} className="bordered-btn">
               {serviceData.buttonText} <i className="fa-light fa-arrow-right" />
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Project Swiper Carousel */}

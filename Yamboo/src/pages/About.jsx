@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Breadcrumb from "../components/BreadCrumb";
+import emailjs from "emailjs-com";
 
 const breadcrumbData = {
   title: "Contact",
@@ -21,18 +22,18 @@ const aboutData = {
 const shippingData = [
   {
     icon: "/assets/images/shipping/icon/car.png",
-    title: "Premium Quality",
-    desc: "Crafted with the finest bamboo fibers for luxury & durability.",
+    title: "Fast Delivery",
+    desc: "We ensure your orders reach you quickly and safely with reliable transport services.",
   },
   {
     icon: "/assets/images/shipping/icon/service.png",
     title: "Customer Support",
-    desc: "We’re here to assist you with quick and friendly service.",
+    desc: "Our friendly support team is always ready to assist you with your queries.",
   },
   {
     icon: "/assets/images/shipping/icon/card.png",
-    title: "Eco-Friendly",
-    desc: "100% hypoallergenic, and safe for sensitive skin.",
+    title: "Effective Payments",
+    desc: "Affordable payment options designed to give you the best value.",
   },
 ];
 
@@ -50,34 +51,12 @@ const contactInfoData = {
       link: "tel://+919740643497",
       text: "+91 97406 43497",
     },
-    // {
-    //   icon: "pe-7s-user",
-    //   text: "Managing Director: Prabakar"
-    // },
-    // {
-    //   icon: "pe-7s-chat",
-    //   link: "https://wa.me/919740643497",
-    //   text: "WhatsApp: +91 97406 43497"
-    // },
-    // {
-    //   icon: "pe-7s-global",
-    //   link: "https://texturaexports.com",
-    //   text: "www.texturaexports.com"
-    // },
-    // {
-    //   icon: "pe-7s-mail",
-    //   link: "mailto:Prabakar@texturaexports.com",
-    //   text: "Prabakar@texturaexports.com"
-    // },
-    // {
-    //   icon: "pe-7s-mail",
-    //   link: "mailto:Sales@texturaexports.com",
-    //   text: "Sales@texturaexports.com"
-    // }
   ],
 };
 
 const About = () => {
+  const [formStatus, setFormStatus] = useState({ type: "", message: "" });
+
   return (
     <div>
       <main className="main-content">
@@ -95,9 +74,6 @@ const About = () => {
                     <span>{aboutData.title.split(" ")[1]}</span>
                   </h2>
                   <p className="about-desc">{aboutData.description}</p>
-                  <div className="about-signature">
-                    <img src={aboutData.signatureImg} alt="Signature" />
-                  </div>
                 </div>
               </div>
             </div>
@@ -163,12 +139,56 @@ const About = () => {
                       ))}
                     </ul>
                   </div>
-                  <form id="contact-form" className="contact-form" action="">
+                  <form
+                    id="contact-form"
+                    className="contact-form"
+                    onSubmit={(e) => {
+                      e.preventDefault();
+
+                      const firstname = e.target.firstname.value.trim();
+                      const phone = e.target.phone.value.trim();
+
+                      if (!firstname || !phone) {
+                        setFormStatus({
+                          type: "error",
+                          message: "First Name and Phone Number are required.",
+                        });
+                        return;
+                      }
+
+                      emailjs
+                        .sendForm(
+                          "service_mafgzvq", // your EmailJS service ID
+                          "template_g07p279", // your EmailJS template ID
+                          e.target,
+                          "RLN__pvlNyFcMngmP" // your EmailJS public key
+                        )
+                        .then(
+                          () => {
+                            setFormStatus({
+                              type: "success",
+                              message:
+                                "Your message has been sent successfully!",
+                            });
+                            e.target.reset();
+                          },
+                          () => {
+                            setFormStatus({
+                              type: "error",
+                              message:
+                                "Failed to send message. Please try again.",
+                            });
+                          }
+                        );
+                    }}
+                  >
+                    <input type="hidden" name="company" value="Yamboo" />
+
                     <div className="group-input">
                       <div className="form-field me-lg-30 mb-35 mb-lg-0">
                         <input
                           type="text"
-                          name="con_firstName"
+                          name="firstname"
                           placeholder="First Name*"
                           className="input-field"
                         />
@@ -176,8 +196,8 @@ const About = () => {
                       <div className="form-field mb-35">
                         <input
                           type="text"
-                          name="con_lastName"
-                          placeholder="Last Name*"
+                          name="lastname"
+                          placeholder="Last Name"
                           className="input-field"
                         />
                       </div>
@@ -186,23 +206,23 @@ const About = () => {
                       <div className="form-field me-lg-30 mb-35 mb-lg-0">
                         <input
                           type="text"
-                          name="con_phone"
+                          name="phone"
                           placeholder="Phone*"
                           className="input-field"
                         />
                       </div>
                       <div className="form-field">
                         <input
-                          type="text"
-                          name="con_email"
-                          placeholder="Email*"
+                          type="email"
+                          name="email"
+                          placeholder="Email"
                           className="input-field"
                         />
                       </div>
                     </div>
                     <div className="form-field mb-5">
                       <textarea
-                        name="con_message"
+                        name="message"
                         placeholder="Message"
                         className="textarea-field"
                       ></textarea>
@@ -215,7 +235,17 @@ const About = () => {
                         Submit
                       </button>
                     </div>
-                    <p className="form-message mt-3 mb-0"></p>
+                    {formStatus.message && (
+                      <p
+                        className={`form-message mt-3 mb-0 ${
+                          formStatus.type === "error"
+                            ? "text-danger"
+                            : "text-success"
+                        }`}
+                      >
+                        {formStatus.message}
+                      </p>
+                    )}
                   </form>
                 </div>
               </div>

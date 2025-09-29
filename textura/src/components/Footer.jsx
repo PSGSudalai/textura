@@ -26,7 +26,7 @@ const footerData = {
     ],
     animationDelays: ["200ms", "400ms", "600ms"],
   },
-  copyright: "Copyright © 2025 Textura Exports, Inc. - All rights reserved.",
+  copyright: "Copyright © 2025 Textura Exports Pvt Ltd. - All rights reserved.",
 };
 
 const Footer = () => {

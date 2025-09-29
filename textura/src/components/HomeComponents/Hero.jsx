@@ -4,6 +4,7 @@ import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import { Link } from "react-router-dom";
 
 import home2 from "../img/home1.jpg";
 import home1 from "../img/home2.png";
@@ -33,7 +34,8 @@ const Hero = () => {
       subtitle: "Eco-Friendly Innovation",
       title: (
         <>
-          Skin-Friendly & <span>Hypoallergenic</span> <br /> Bamboo Products
+          Skin-Friendly & <span>Hypoallergenic</span> <br /> Sustainable
+          Products
         </>
       ),
       description:
@@ -98,10 +100,17 @@ const Hero = () => {
                         <h2 className="text-white">{slide.title}</h2>
                       </div>
                       <h5 className="text-white">{slide.description}</h5>
-                      <a href={slide.buttonLink} className="white-btn mt-40">
-                        {slide.buttonText}{" "}
-                        <i className="fa-light fa-arrow-right" />
-                      </a>
+                      {slide.buttonLink.startsWith("#") ? (
+                        <a href={slide.buttonLink} className="white-btn mt-40">
+                          {slide.buttonText}{" "}
+                          <i className="fa-light fa-arrow-right" />
+                        </a>
+                      ) : (
+                        <Link to={slide.buttonLink} className="white-btn mt-40">
+                          {slide.buttonText}{" "}
+                          <i className="fa-light fa-arrow-right" />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>

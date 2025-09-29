@@ -10,9 +10,11 @@ const Home = () => {
     <div>
       <HomeSlider />
       <Banners />
-      <NewProducts id="products"/>
-      <HomeAdd/>
-      <CustomerReviews/>
+      <div id="products">
+        <NewProducts />
+      </div>
+      <HomeAdd />
+      <CustomerReviews />
     </div>
   );
 };

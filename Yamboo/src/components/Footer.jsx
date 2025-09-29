@@ -131,7 +131,7 @@ const Footer = () => {
               <div className="col-lg-12">
                 <div className="copyright">
                   <span className="copyright-text">
-                    © {new Date().getFullYear()} <strong>Yamboo</strong> | All
+                    © {new Date().getFullYear()} <strong>Textura Exports Pvt Ltd.</strong> | All
                     Rights Reserved | Made with{" "}
                     <i className="fa fa-heart text-danger"></i> in India
                   </span>

@@ -59,12 +59,12 @@ const Header = () => {
                     </li>
                     <li>
                       <a href="#" className="has-arrow navlink">
-                        Brands
+                        Our Brands
                       </a>
                       <ul className="sub-menu">
                         <li>
                           <a
-                            href="https://yam-phi.vercel.app/"
+                            href="https://yamboo.texturaexports.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -112,7 +112,7 @@ const Header = () => {
                           </li>
                           <li>
                             <Link to="#" onClick={closeMenu}>
-                              Brands
+                              Our Brands
                             </Link>
                             <ul className="sub-menu">
                               <li>
@@ -133,7 +133,7 @@ const Header = () => {
                               About Us
                             </Link>
                           </li>
-                          
+
                           <li>
                             <Link to="/contact" onClick={closeMenu}>
                               Contact

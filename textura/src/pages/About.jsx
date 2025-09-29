@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const About = () => {
   const historyData = [
@@ -26,7 +27,7 @@ const About = () => {
   ];
 
   const teamData = {
-    sectionTitle: "Meet our skilled team of textile experts",
+    sectionTitle: "Meet our skilled team of Textura Exports",
     sectionDescription:
       "We specialize in innovative textile solutions, offering sustainable fabrics, design expertise, and export-quality manufacturing for global markets.",
     buttonText: "Contact Our Team",
@@ -114,12 +115,15 @@ const About = () => {
                   company specializing in 100% bamboo textiles. We are dedicated
                   to bridging the gap between India’s sustainable manufacturing
                   capabilities and the growing demand for eco-friendly textile
-                  solutions worldwide.  <br />
-                  Our expertise lies in sourcing, designing, and exporting high-quality 
-                  bamboo-based products such as bath towels, hand towels, baby towels, 
-                  tissue papers, and pillow covers under our premium brand Yamboo. 
-                  Each product is carefully crafted to meet international quality 
-                  standards,ensuring softness, durability, and sustainability.  <br />
+                  solutions worldwide. <br />
+                  <br />
+                  Our expertise lies in sourcing, designing, and exporting
+                  high-quality bamboo-based products such as bath towels, hand
+                  towels, baby towels, tissue papers, and pillow covers under
+                  our premium brand Yamboo. Each product is carefully crafted to
+                  meet international quality standards,ensuring softness,
+                  durability, and sustainability. <br />
+                  <br />
                   At Textura Exports, we believe in responsible trade-supporting
                   eco-conscious buyers such as hotels, retailers, lifestyle
                   brands, and hospitality groups who are making a shift toward
@@ -199,9 +203,9 @@ const About = () => {
               <p>{teamData.sectionDescription}</p>
             </div>
             <div className="col-xl-4 col-lg-6 col-md-5 text-md-end">
-              <a href={teamData.buttonLink} className="bordered-btn">
+              <Link to={teamData.buttonLink} className="bordered-btn">
                 {teamData.buttonText} <i className="fa-light fa-arrow-right" />
-              </a>
+              </Link>
             </div>
           </div>
 

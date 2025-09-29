@@ -16,10 +16,7 @@ const Details = () => {
     <main className="main-content">
       <Breadcrumb
         title={product.name}
-        links={[
-          { to: "/", label: "Home" },
-          { label: "Product Details" }
-        ]}
+        links={[{ to: "/", label: "Home" }, { label: "Product Details" }]}
       />
 
       <div className="single-product-area section-space-top-100">
@@ -27,7 +24,11 @@ const Details = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="single-product-img">
-                <img className="img-full" src={product.image} alt={product.name} />
+                <img
+                  className="img-full"
+                  src={product.image}
+                  alt={product.name}
+                />
               </div>
             </div>
 
@@ -44,8 +45,12 @@ const Details = () => {
                   <tbody>
                     {Object.entries(product.attributes).map(([key, value]) => (
                       <tr key={key}>
-                        <th>{key.toUpperCase()}</th>
-                        <td>{Array.isArray(value) ? value.join(", ") : value}</td>
+                        <th>
+                          {key == "ageGroup" ? "AGE GROUP" : key.toUpperCase()}
+                        </th>
+                        <td>
+                          {Array.isArray(value) ? value.join(", ") : value}
+                        </td>
                       </tr>
                     ))}
                   </tbody>

@@ -4,7 +4,7 @@ const Team = () => {
   const teamData = {
     sectionBg: "/assets/img/img2.jpg",
     sectionTitle: "Our Team",
-    sectionHeading: "Meet our skilled team of Textura experts",
+    sectionHeading: "Meet our skilled team of Textura Exports",
     sectionDescription:
       "At Textura, our strength lies in our people. From design to delivery, our team blends creativity, technical expertise, and sustainable values to craft world-class bamboo textile solutions.",
 

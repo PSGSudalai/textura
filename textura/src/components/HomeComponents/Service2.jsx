@@ -37,7 +37,7 @@ const serviceData = [
   {
     id: 5,
     icon: "assets/img/service/icon5.png",
-    title: "B2B Partnerships",
+    title: "B2B Partnerships & Collaboration",
     description:
       "We serve hotels, retail chains, lifestyle brands, spas, and distributors worldwide with consistent supply, competitive pricing, and after-sales support.",
     delay: "1000ms",
@@ -55,18 +55,63 @@ const serviceData = [
 const Service2 = () => {
   return (
     <div className="mt-50">
+      {/* Internal Styles */}
+      <style>{`
+        .service-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 24px;
+        }
+        .single-service-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          text-align: center;
+          padding: 24px;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+          background: #fff;
+          min-height: 350px; /* ensures same height */
+        }
+        .service-icon img {
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+        }
+        .service-title h5 {
+          margin-top: 12px;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 1.4;
+          min-height: 50px; /* keeps titles aligned */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .service-title p {
+          font-size: 15px;
+          line-height: 1.6;
+          color: #555;
+          margin-top: 10px;
+          min-height: 70px; /* keeps descriptions aligned */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      `}</style>
+
       <div id="service-2" className="service-section section-padding pb-0 pt-0">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-xl-6 col-lg-5 col-md-6">
+            <div className="col-xl-8 col-lg-8 col-md-7">
               <div className="section-title">
                 <h6>Our Services</h6>
                 <h2 className="visible-slowly-right">
-                  Textura Exports Solutions for Global Partners
+                  Textura Exports - <br />Solutions for Global Partners
                 </h2>
               </div>
             </div>
-            <div className="col-xl-2 col-lg-3 col-md-1" />
             <div className="col-xl-4 col-lg-4 col-md-5">
               <p className="pt-40">
                 We provide end-to-end export solutions for eco-friendly bamboo
@@ -77,29 +122,20 @@ const Service2 = () => {
             </div>
           </div>
 
-          <div className="row mt-60 gy-4">
+          {/* Grid layout instead of bootstrap row */}
+          <div className="service-grid mt-60">
             {serviceData.map((service) => (
               <div
                 key={service.id}
-                className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 wow fadeInUp animated"
+                className="single-service-item wow fadeInUp animated"
                 data-wow-delay={service.delay}
               >
-                <div className="single-service-item text-center p-4 rounded shadow-sm h-100">
-                  <div className="service-icon mb-3">
-                    <img
-                      src={service.icon}
-                      alt={service.title}
-                      style={{
-                        width: "60px",
-                        height: "60px",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </div>
-                  <div className="service-title">
-                    <h5 className="fw-bold">{service.title}</h5>
-                    <p className="mt-2">{service.description}</p>
-                  </div>
+                <div className="service-icon mb-3">
+                  <img src={service.icon} alt={service.title} />
+                </div>
+                <div className="service-title">
+                  <h5>{service.title}</h5>
+                  <p>{service.description}</p>
                 </div>
               </div>
             ))}
